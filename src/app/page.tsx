@@ -2,29 +2,33 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { LinkedinIcon, MailIcon, GithubIcon } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function GameDevPortfolio() {
   const gameProjects = [
     {
       id: 1,
-      title: "Project 1",
-      description: "A brief description of the game project.",
-      role: "Game Designer",
-      technologies: ["Unity", "C#", "Blender"],
+      title: "Fantasy RPG Demo",
+      description: "A multiplayer RPG demo showcasing complex gameplay systems, including networking, inventory management, and user interface design.",
+      role: "Game Developer & Designer",
+      technologies: ["Unity", "C#", "UGUI", "Protobuf"],
+      image: "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png"
     },
     {
       id: 2,
-      title: "Project 2",
-      description: "Another game project description.",
-      role: "Game Developer",
-      technologies: ["Unreal Engine", "C++", "Maya"],
+      title: "Grappling Hook Demo",
+      description: "A recreation of the grappling hook mechanics from Sekiro: Shadows Die Twice, featuring dynamic rope physics and realistic hook detection.",
+      role: "Technical Designer",
+      technologies: ["Unity", "C#", "Physics Simulation"],
+      image: "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png"
     },
     {
       id: 3,
-      title: "Project 3",
-      description: "A third game project description.",
-      role: "Game Developer & Designer",
-      technologies: ["Godot", "GDScript", "Aseprite"],
+      title: "Tic-Tac-Toe AI",
+      description: "An implementation of the classic Tic-Tac-Toe game with AI opponents of varying difficulty, utilizing algorithms like minimax for unbeatable gameplay.",
+      role: "AI Programmer",
+      technologies: ["Python", "Minimax Algorithm", "Game AI"],
+      image: "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png"
     },
   ]
 
@@ -54,19 +58,19 @@ export default function GameDevPortfolio() {
             Game developer and designer passionate about creating immersive experiences. With a strong background in both development and design, I strive to craft engaging and innovative games that push the boundaries of interactive entertainment.
           </p>
           <div className="flex justify-center space-x-4">
-            <Button asChild>
+            <Button asChild variant="outline">
               <Link href="https://www.linkedin.com/in/bangyu-li/" target="_blank" rel="noopener noreferrer">
                 <LinkedinIcon className="mr-2 h-4 w-4" />
                 LinkedIn
               </Link>
             </Button>
-            <Button asChild>
+            <Button asChild variant="outline">
               <Link href="mailto:by.brad.li@gmail.com">
                 <MailIcon className="mr-2 h-4 w-4" />
                 Email
               </Link>
             </Button>
-            <Button asChild>
+            <Button asChild variant="outline">
               <Link href="https://github.com/deep-river" target="_blank" rel="noopener noreferrer">
                 <GithubIcon className="mr-2 h-4 w-4" />
                 GitHub
@@ -77,33 +81,45 @@ export default function GameDevPortfolio() {
 
         <section>
           <h2 className="text-3xl font-bold mb-8 text-center">Game Projects</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="space-y-6">
             {gameProjects.map((project) => (
-              <Card key={project.id}>
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.role}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="bg-primary text-primary-foreground text-sm px-2 py-1 rounded"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+              <Card key={project.id} className="overflow-hidden">
+                <div className="md:flex">
+                  <div className="md:w-1/3 relative h-48 md:h-auto">
+                    <Image 
+                      src={project.image} 
+                      alt={`${project.title} thumbnail`}
+                      layout="fill"
+                      objectFit="cover"
+                    />
                   </div>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild className="w-full">
-                    <Link href={`/projects/${project.id}`}>
-                      More
-                    </Link>
-                  </Button>
-                </CardFooter>
+                  <div className="md:w-2/3 p-6">
+                    <CardHeader>
+                      <CardTitle>{project.title}</CardTitle>
+                      <CardDescription>{project.role}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="mb-4">{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.technologies.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="bg-secondary text-secondary-foreground text-sm px-2 py-1 rounded"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </CardContent>
+                    <CardFooter>
+                      <Button asChild className="w-full md:w-auto">
+                        <Link href={`/projects/${project.id}`}>
+                          More Details
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </div>
+                </div>
               </Card>
             ))}
           </div>
