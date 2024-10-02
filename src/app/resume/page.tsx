@@ -184,6 +184,7 @@ export default function Resume() {
                     <li>Python</li>
                     <li>Go</li>
                     <li>C#</li>
+                    <li>C++</li>
                     <li>Javascript</li>
                     <li>Lua</li>
                   </ul>
@@ -204,6 +205,13 @@ export default function Resume() {
                   </ul>
                 </div>
                 <div>
+                  <h3 className="font-semibold mb-2">Version Control Tools</h3>
+                  <ul className="list-disc list-inside">
+                    <li>Git</li>
+                    <li>Perforce(P4V)</li>
+                  </ul>
+                </div>
+                <div>
                   <h3 className="font-semibold mb-2">Unreal 5 Engine</h3>
                   <p className="font-medium">Proficient in:</p>
                   <ul className="list-disc list-inside mb-2">
@@ -214,13 +222,6 @@ export default function Resume() {
                   <ul className="list-disc list-inside">
                     <li>Able Ability System</li>
                     <li>Behavior tree</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Version Control Tools</h3>
-                  <ul className="list-disc list-inside">
-                    <li>Git</li>
-                    <li>P4</li>
                   </ul>
                 </div>
               </div>
