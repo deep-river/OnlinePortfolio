@@ -1,6 +1,6 @@
 'use client'
 
-import { useParams } from 'next/navigation'
+// import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
@@ -8,8 +8,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { GithubIcon } from "lucide-react"
 
 export default function ProjectDetail() {
-  const params = useParams()
-  const { id } = params
+  // const params = useParams()
+  // const { id } = params
 
   const project = {
     title: "MMORPG Demo Template",
