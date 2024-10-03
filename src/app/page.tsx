@@ -8,6 +8,22 @@ export default function GameDevPortfolio() {
   const gameProjects = [
     {
       id: 1,
+      title: "Apocalypse Party on Steam",
+      description: "Apocalypse Party is a 3D top-down action Roguelike game. In this game, you will embark on a new mission to traverse through the Middle Ages and gradually master abilities, and arm yourself to become the strongest survivor through numerous choices.",
+      role: "UE5 Technical Designer",
+      technologies: ["Unreal", "Blueprint", "Able Ability System"],
+      image: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/apocalypse-party-pc-game-steam-cover.jpg"
+    },
+    {
+      id: 2,
+      title: "Project Party by Lilith Games",
+      description: "Project Party is the new life simulation just announced by Lilith Games promising a mix of familiar life sim and in-game socialising, it'll also come with a packaged game editor. You'll be able to enjoy experiences ranging from shooter to horror and even more, Lilith promises.",
+      role: "Technical Designer",
+      technologies: ["Python", "Javascript", "Lua", "Network Programming"],
+      image: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/project-party-cover.jpg"
+    },
+    {
+      id: 3,
       title: "Fantasy RPG Demo",
       description: "A multiplayer RPG demo showcasing complex gameplay systems, including networking, inventory management, and user interface design.",
       role: "Game Developer & Designer",
@@ -15,7 +31,7 @@ export default function GameDevPortfolio() {
       image: "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png"
     },
     {
-      id: 2,
+      id: 4,
       title: "Grappling Hook Demo",
       description: "A recreation of the grappling hook mechanics from Sekiro: Shadows Die Twice, featuring dynamic rope physics and realistic hook detection.",
       role: "Technical Designer",
@@ -23,7 +39,7 @@ export default function GameDevPortfolio() {
       image: "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png"
     },
     {
-      id: 3,
+      id: 5,
       title: "Tic-Tac-Toe AI",
       description: "An implementation of the classic Tic-Tac-Toe game with AI opponents of varying difficulty, utilizing algorithms like minimax for unbeatable gameplay.",
       role: "AI Programmer",
@@ -38,12 +54,12 @@ export default function GameDevPortfolio() {
         <nav className="container mx-auto px-4 py-4">
           <ul className="flex justify-center space-x-4">
             <li>
-              <Link href="/" className="hover:underline font-medium">
+              <Link href="/" className="hover:underline font-semibold text-lg">
                 Portfolio
               </Link>
             </li>
             <li>
-              <Link href="/resume" className="hover:underline font-medium">
+              <Link href="/resume" className="hover:underline font-semibold text-lg">
                 Resume
               </Link>
             </li>
@@ -53,10 +69,12 @@ export default function GameDevPortfolio() {
 
       <main className="container mx-auto px-4 py-8">
         <section className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Bangyu Li</h1>
-          <p className="text-xl mb-6 max-w-2xl mx-auto">
-            Game developer and designer passionate about creating immersive experiences. With a strong background in both development and design, I strive to craft engaging and innovative games that push the boundaries of interactive entertainment.
-          </p>
+          <h1 className="text-5xl font-bold mb-4">Bangyu Li</h1>
+          <div className="max-w-2xl mx-auto">
+            <p className="text-xl mb-6 text-left">
+              Game developer and designer passionate about creating immersive experiences. With a strong background in both development and design, I strive to craft engaging and innovative games that push the boundaries of interactive entertainment.
+            </p>
+          </div>
           <div className="flex justify-center space-x-4">
             <Button asChild variant="outline">
               <Link href="https://www.linkedin.com/in/bangyu-li/" target="_blank" rel="noopener noreferrer">
@@ -80,7 +98,7 @@ export default function GameDevPortfolio() {
         </section>
 
         <section>
-          <h2 className="text-3xl font-bold mb-8 text-center">Game Projects</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center">Game Projects</h2>
           <div className="space-y-6">
             {gameProjects.map((project) => (
               <Card key={project.id} className="overflow-hidden">

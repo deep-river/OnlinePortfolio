@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Gamepad2 } from "lucide-react"
+import { GithubIcon } from "lucide-react"
 
 export default function ProjectDetail() {
   const params = useParams()
@@ -58,8 +58,8 @@ export default function ProjectDetail() {
             <CardContent>
               <Button asChild variant="outline">
                 <Link href={project.steamLink} target="_blank" rel="noopener noreferrer">
-                  <Gamepad2 className="mr-2 h-4 w-4" />
-                  View on Steam
+                  <GithubIcon className="mr-2 h-4 w-4" />
+                  View on Github
                 </Link>
               </Button>
             </CardContent>
