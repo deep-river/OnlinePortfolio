@@ -12,7 +12,7 @@ export default function ProjectDetail() {
     title: "MMORPG Demo Template",
     description: "A multiplayer RPG demo showcasing my expertise in designing and implementing complex gameplay systems.",
     steamLink: "https://store.steampowered.com/app/2351560/Apocalypse_Party/",
-    videoSrc: "https://www.youtube.com/embed/5L6_39IG5XI",
+    videoSrc: "https://www.youtube.com/embed/sk6lfvUOMdY",
     images: [
       "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png",
       "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo03.png"

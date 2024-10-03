@@ -9,18 +9,23 @@ import { Gamepad2 } from "lucide-react"
 export default function ProjectDetail() {
 
   const project = {
-    title: "MMORPG Demo Template",
-    description: "A multiplayer RPG demo showcasing my expertise in designing and implementing complex gameplay systems.",
+    title: "Apocalypse Party",
+    description: "Apocalypse Party is a 3D top-down action Roguelike game. In this game, you will embark on a new mission to traverse through the Middle Ages and gradually master abilities, and arm yourself to become the strongest survivor through numerous choices.",
     steamLink: "https://store.steampowered.com/app/2351560/Apocalypse_Party/",
-    videoSrc: "https://www.youtube.com/embed/5L6_39IG5XI",
+    videoSrc: "https://www.youtube.com/embed/ALRJ2hy0kwo",
     images: [
       "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png",
       "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo03.png"
     ],
-    features: [
-      "Networking: Implemented a C# network messaging framework using Protobuf for real-time, event-driven state synchronization of character movement, ensuring smooth and reliable multiplayer interactions.",
-      "Game Systems: Developed core gameplay systems, including inventory, shop, friend list, team-up, and multi-channel chat to enrich multiplayer gameplay experience.",
-      "User Interface: Built an intuitive UI framework with UGUI for managing menus, item displays, and inventory interactions, improving the overall user experience and interface responsiveness."
+    genre: "Action, Casual, Indie, Strategy",
+    engine: "Unreal 5",
+    platform: "PC",
+    teamsize: 10,
+    roles: [
+      "Technical Designer: Implemented gameplay systems and mechanics using Unreal Engine 5 Blueprints.",
+      "UI/UX Designer: Designed and implemented user interfaces for menus, inventory, and in-game HUD.",
+      "Gameplay Programmer: Developed core gameplay features including character abilities and combat systems.",
+      "Multiplayer Network Programmer: Implemented real-time multiplayer functionality and state synchronization."
     ]
   }
 
@@ -47,32 +52,42 @@ export default function ProjectDetail() {
         <h1 className="text-4xl font-bold mb-8 text-center">{project.title}</h1>
         
         <section className="mb-8">
-          <Card>
-            <CardHeader>
-              <CardTitle>Project Overview</CardTitle>
-              <CardDescription>{project.description}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button asChild variant="outline">
-                <Link href={project.steamLink} target="_blank" rel="noopener noreferrer">
-                  <Gamepad2 className="mr-2 h-4 w-4" />
-                  View on Steam
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Demo Video</h2>
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe 
-              src={project.videoSrc} 
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/2">
+              <div className="max-w-screen-md mx-auto">
+                <div className="aspect-w-16 aspect-h-9">
+                  <iframe 
+                    src={project.videoSrc} 
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <Card>
+                <CardHeader>
+                  <CardTitle>About the game</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 mb-4">
+                    <p><span className="font-semibold">GENRE:</span> {project.genre}</p>
+                    <p><span className="font-semibold">Engine:</span> {project.engine}</p>
+                    <p><span className="font-semibold">Platform:</span> {project.platform}</p>
+                    <p><span className="font-semibold">Team size:</span> {project.teamsize}</p>
+                  </div>
+                  <Button asChild variant="outline">
+                    <Link href={project.steamLink} target="_blank" rel="noopener noreferrer">
+                      <Gamepad2 className="mr-2 h-4 w-4" />
+                      View on Steam
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
 
@@ -94,16 +109,16 @@ export default function ProjectDetail() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Key Features</h2>
+          <h2 className="text-2xl font-bold mb-4">Role(s) and Responsibilities</h2>
           <ul className="list-disc list-inside space-y-2">
-            {project.features.map((feature, index) => (
-              <li key={index}>{feature}</li>
+            {project.roles.map((role, index) => (
+              <li key={index}>{role}</li>
             ))}
           </ul>
         </section>
 
         <div className="text-center">
-          <Button asChild>
+          <Button asChild size="lg">
             <Link href="/">Back to Portfolio</Link>
           </Button>
         </div>
