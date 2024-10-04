@@ -20,12 +20,15 @@ export default function ProjectDetail() {
     githubLink: "https://github.com/deep-river/mmorpg-demo-template",
     videoSrc: "https://player.bilibili.com/player.html?isOutside=true&aid=868888473&bvid=BV1aV4y1673Y&cid=1139805795&p=1",
     images: [
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-01.jpg",
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-02.jpg",
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-03.jpg",
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-04.jpg"
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-01.png",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-03.png",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-05.png",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-06.png",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-08.png",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-09.png",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-10.png"
     ],
-    genre: "Simulation",
+    genre: "MMORPG",
     engine: "Unity Engine",
     platform: "PC",
     teamsize: "1",
@@ -33,7 +36,38 @@ export default function ProjectDetail() {
       "Networking: Implemented a C# network messaging framework using Protobuf for real-time, event-driven state synchronization of character movement, ensuring smooth and reliable multiplayer interactions.",
       "Game Systems: Developed core gameplay systems, including inventory, shop, friend list, team-up, and multi-channel chat to enrich multiplayer gameplay experience.",
       "User Interface: Built an intuitive UI framework with UGUI for managing menus, item displays, and inventory interactions, improving the overall user experience and interface responsiveness."
-    ]
+    ],
+    mainModules: {
+      common: [
+        "Packet processing & message dispatching module"
+      ],
+      server: [
+        "Network module",
+        "Database management service",
+        "User management service",
+        "Scene management service",
+        "Item management service",
+        "Quest management service",
+        "Friend management service",
+        "Team management service",
+        "Chat management service"
+      ],
+      client: [
+        "Protocol communication module",
+        "DataManager - Local data loading module",
+        "UserService - User management module (handling login, registration, etc.)",
+        "SceneManager & MapService - Scene management module (handling character entry, exit, etc.)",
+        "BagManager - Inventory management module",
+        "ShopManager - Shop management module",
+        "ItemService & ItemManager - Item system",
+        "NpcManager - NPC management module",
+        "QuestService & QuestManager - Quest system",
+        "FriendService & FriendManager - Friend system",
+        "TeamService & TeamManager - Team system",
+        "ChatService & ChatManager - Chat system",
+        "UIManager, UIWindow, UIMessageBox, UIInputBox - UGUI framework and extended components"
+      ]
+    }
   }
 
   return (
@@ -118,9 +152,41 @@ export default function ProjectDetail() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4">Key Features</h2>
-          {project.features.map((feature, index) => (
+          <ul className="list-disc list-inside space-y-2">
+            {project.features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Main Modules</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Common</h3>
+              <ul className="list-disc list-inside">
+                {project.mainModules.common.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Server</h3>
+              <ul className="list-disc list-inside">
+                {project.mainModules.server.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Client</h3>
+              <ul className="list-disc list-inside">
+                {project.mainModules.client.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </section>
 
         <div className="text-center">
