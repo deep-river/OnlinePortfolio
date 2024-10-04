@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Gamepad2, X } from "lucide-react"
+import { X } from "lucide-react"
 
 export default function ProjectDetail() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -19,9 +19,10 @@ export default function ProjectDetail() {
     description: "Boom! Party is an unreleased multiplayer third-person puzzle narrative game being developed for both iOS and Android using the company's game engine with a team of 300. Players will collaborate or compete with other players to solve different mystery cases, and they will communicate and vote out the killer, who can be either an NPC or another player, through various deductions.",
     videoSrc: "https://www.youtube.com/embed/sk6lfvUOMdY",
     images: [
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Apocalypse-party-screenshot-01.jpg",
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Apocalypse-party-screenshot-02.jpg",
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Apocalypse-party-screenshot-03.jpg"
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-01.jpg",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-02.jpg",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-03.jpg",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-04.jpg"
     ],
     genre: "Simulation",
     engine: "Avatar Engine",
