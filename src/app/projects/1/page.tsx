@@ -88,16 +88,16 @@ export default function ProjectDetail() {
         {
           title: "3. Implementation",
           content:[
-            "The combo system is initialized in Blueprints after the main game systems are fully loaded. Each combo sequence is configured in the Able Ability System. The initial combo attack is then bound to the Blueprint of a weapon or character talent.",
+            "The combo system is initialized in Blueprints after the main game systems are fully loaded. Each combo sequence is configured in the Able Ability Editor. The initial combo attack is then bound to the Blueprint of a weapon or character talent.",
             "When the combo is triggered, the pre-configured Tasks are executed sequentially, including Play Animations, Play Sound Effects, Play Visual Effects, Execute Ability Transitions, and Invoke Blueprint events to play UI animations."
           ],
           subsections: [
             {
-              title: "Implementation example of weapon - Jeetkunedo:",
+              title: "Implementation Example: Weapon - Jeetkunedo",
               bullets: [
-                "Provide players with a high-risk, but powerful combat mechanic to deal with large group of enemies.",
-                "Enhance the overall player experience by introducing a skill-based combat system that integrates seamlessly with existing gameplay mechanics.",
-                "Ensure the system is intuitive to use, even in fast-paced combat scenarios, while offering depth for advanced players."
+                "Developed Blueprint functions to detect player input and execute corresponding combo transitions during the Task tick. This Blueprint is a child of the Able Custom Task, allowing it to be called in the Able Ability Editor as an AttackingBranch Task. This setup enables directional combo attack transitions based on player inputs. The duration of the AttackingBranch Task defines the input window, which can be fine-tuned according to the designer's needs.",
+                "Configured and fine-tuned each combo attack in the Able Ability Editor, including animation, sound effects, particle effects, and player movements.",
+                "Implemented functions to invoke dynamic UI animations within Blueprints and ensured their seamless integration with other systems. For example, when the player gains a buff that increases attack speed, the playback speed of the UI animations adjusts accordingly to remain synchronized with the attack animations."
               ]
             }
           ],
@@ -117,6 +117,18 @@ export default function ProjectDetail() {
             {
               src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Jeetkunedo-UI-Init-02.png",
               alt: "Implementation of dynamic UI 02"
+            },
+            {
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Jeetkunedo-UI-anim-01.png",
+              alt: "Implementation of dynamic UI 03"
+            },
+            {
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Jeetkunedo-UI-anim-02.png",
+              alt: "Implementation of dynamic UI 04"
+            },
+            {
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Jeetkunedo-UI-anim-03.png",
+              alt: "Implementation of dynamic UI 05"
             }
           ]
         },
