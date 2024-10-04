@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { LinkedinIcon, MailIcon, GithubIcon } from "lucide-react"
@@ -5,6 +8,10 @@ import Link from "next/link"
 import Image from "next/image"
 
 export default function GameDevPortfolio() {
+  useEffect(() => {
+    document.title = "Bangyu Li | Game Developer/Designer Portfolio"
+  }, [])
+
   const gameProjects = [
     {
       id: 1,
@@ -17,7 +24,7 @@ export default function GameDevPortfolio() {
     {
       id: 2,
       title: "Project Party by Lilith Games",
-      description: "Project Party is the new life simulation just announced by Lilith Games promising a mix of familiar life sim and in-game socialising, it'll also come with a packaged game editor. You'll be able to enjoy experiences ranging from shooter to horror and even more, Lilith promises.",
+      description: "Project Party(a.k.a. Boom! Party) is the new life simulation just announced by Lilith Games promising a mix of familiar life sim and in-game socialising, it'll also come with a packaged game editor. You'll be able to enjoy experiences ranging from shooter to horror and even more, Lilith promises.",
       role: "Technical Designer",
       technologies: ["Python", "Javascript", "Lua", "Network Programming"],
       image: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/project-party-cover.jpg"
@@ -67,7 +74,7 @@ export default function GameDevPortfolio() {
         </nav>
       </header>
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-8 md:px-24 lg:px-32 xl:px-48 py-8">
         <section className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-4">Bangyu Li</h1>
           <div className="max-w-2xl mx-auto">
@@ -107,8 +114,8 @@ export default function GameDevPortfolio() {
                     <Image 
                       src={project.image} 
                       alt={`${project.title} thumbnail`}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className="md:w-2/3 p-6">

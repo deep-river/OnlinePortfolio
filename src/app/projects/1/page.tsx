@@ -1,13 +1,18 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Gamepad2 } from "lucide-react"
-import Head from 'next/head'
+import { Gamepad2, X } from "lucide-react"
 
 export default function ProjectDetail() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
+  useEffect(() => {
+    document.title = "Bangyu Li | Game Developer/Designer Portfolio"
+  }, [])
 
   const project = {
     title: "Apocalypse Party",
@@ -15,8 +20,9 @@ export default function ProjectDetail() {
     steamLink: "https://store.steampowered.com/app/2351560/Apocalypse_Party/",
     videoSrc: "https://www.youtube.com/embed/ALRJ2hy0kwo",
     images: [
-      "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png",
-      "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo03.png"
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Apocalypse-party-screenshot-01.jpg",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Apocalypse-party-screenshot-02.jpg",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Apocalypse-party-screenshot-03.jpg"
     ],
     genre: "Action, Casual, Indie, Strategy",
     engine: "Unreal 5",
@@ -40,7 +46,6 @@ export default function ProjectDetail() {
       }
     ],
     developmentProcess: {
-      title: "Game Design Highlights",
       sections: [
         {
           title: "System Design Example: Precision Strike Combo System",
@@ -76,8 +81,14 @@ export default function ProjectDetail() {
                 "Versatile Combo Transitions: The system supports diverse attack transitions based on player inputs. For instance, different directional inputs combined with precise attack timing will trigger different combo sequences, providing the player with a variety of attack options.",
                 "Stamina System: Each combo attack consumes stamina, limiting how frequently the player can perform combos. Stamina regenerates only when the player is not actively attacking, adding a strategic element to when and how combos are used.",
                 "Dynamic UI System: For player guidance, a dynamic UI indicator located at the bottom center of the screen signals the timing to execute a perfect combo strike. It will also display a corresponding animation if the player fails to do so, offering immediate feedback on the player's performance.",
-                "Damage Scaling: The damage output for each combo is calculated based on the player’s input timing. Successful combo chains result in increased damage, with each consecutive hit amplifying the total damage output through a combo damage multiplier."
+                "Damage Scaling: The damage output for each combo is calculated based on the player's input timing. Successful combo chains result in increased damage, with each consecutive hit amplifying the total damage output through a combo damage multiplier."
               ]
+            }
+          ],
+          images: [
+            {
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/combo%20system%20transition.jpg",
+              alt: "Precision Strike Combo System Diagram"
             }
           ]
         },
@@ -96,6 +107,24 @@ export default function ProjectDetail() {
                 "Ensure the system is intuitive to use, even in fast-paced combat scenarios, while offering depth for advanced players."
               ]
             }
+          ],
+          images: [
+            {
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Jeetkunedo-Able-Tasks-01.png",
+              alt: "Implementation of tasks 01"
+            },
+            {
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Jeetkunedo-Able-Tasks-02.png",
+              alt: "Implementation of tasks 02"
+            },
+            {
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Jeetkunedo-UI-Init-01.png",
+              alt: "Implementation of dynamic UI 01"
+            },
+            {
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Jeetkunedo-UI-Init-02.png",
+              alt: "Implementation of dynamic UI 02"
+            }
           ]
         },
         {
@@ -107,7 +136,7 @@ export default function ProjectDetail() {
             {
               title: "Key Iterations:",
               bullets: [
-                "Timing Adjustments: Based on player feedback, the window for executing combos was slightly expanded to make the system more accessible without compromising the challenge.",
+                "Timing Window Adjustments: Based on player feedback, the timing window for executing perfect combos was slightly expanded to make the system more accessible without compromising the challenge.",
                 "Damage Balancing: Adjusted damage scaling to ensure the system was rewarding but not overpowered, particularly against elite enemies.",
                 "Hitbox Optimization: Refined hitbox detection to improve the accuracy of combo attacks and ensure fair interactions with environmental obstacles."
               ]
@@ -118,173 +147,190 @@ export default function ProjectDetail() {
           title: "5. Final Outcome",
           content:[
             "The Precision Strike Combo System was successfully integrated into the final release of Project Zero 2: Apocalypse Party. It provided players with a more engaging combat experience, introducing a layer of skill-based gameplay that was both challenging and rewarding."
-          ]
-        }
-      ],
-      images: [
-        {
-          src: "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png",
-          alt: "Precision Strike Combo System Diagram"
+          ],
+          video: "https://www.youtube.com/embed/lU-khMAAQpk"
         }
       ]
     }
   }
 
   return (
-    <>
-      <Head>
-        <title>Bangyu Li | Game Developer / Designer Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="bg-primary text-primary-foreground">
+        <nav className="container mx-auto px-4 py-4">
+          <ul className="flex justify-center space-x-4">
+            <li>
+              <Link href="/" className="hover:underline font-semibold text-lg">
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link href="/resume" className="hover:underline font-semibold text-lg">
+                Resume
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-      <div className="min-h-screen bg-background text-foreground">
-        <header className="bg-primary text-primary-foreground">
-          <nav className="container mx-auto px-4 py-4">
-            <ul className="flex justify-center space-x-4">
-              <li>
-                <Link href="/" className="hover:underline font-semibold text-lg">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link href="/resume" className="hover:underline font-semibold text-lg">
-                  Resume
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-
-        <main className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-8 text-center">{project.title}</h1>
-          
-          <section className="mb-8">
-            <div className="flex flex-col md:flex-row gap-8">
-              <div className="md:w-1/2">
-                <div className="max-w-screen-md mx-auto">
-                  <div className="aspect-w-16 aspect-h-9">
-                    <iframe 
-                      src={project.videoSrc} 
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    ></iframe>
+      <main className="container mx-auto px-8 md:px-24 lg:px-32 xl:px-48 py-8">
+        <h1 className="text-4xl font-bold mb-8 text-center">{project.title}</h1>
+        
+        <section className="mb-8">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/2">
+              <div className="max-w-screen-md mx-auto">
+                <div className="aspect-w-16 aspect-h-9">
+                  <iframe 
+                    src={project.videoSrc} 
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <Card>
+                <CardHeader>
+                  <CardTitle>About the game</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 mb-4">
+                    <p><span className="font-semibold">GENRE:</span> {project.genre}</p>
+                    <p><span className="font-semibold">Engine:</span> {project.engine}</p>
+                    <p><span className="font-semibold">Platform:</span> {project.platform}</p>
+                    <p><span className="font-semibold">Team size:</span> {project.teamsize}</p>
                   </div>
-                </div>
-              </div>
-              <div className="md:w-1/2">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>About the game</CardTitle>
-                    <CardDescription>{project.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2 mb-4">
-                      <p><span className="font-semibold">GENRE:</span> {project.genre}</p>
-                      <p><span className="font-semibold">Engine:</span> {project.engine}</p>
-                      <p><span className="font-semibold">Platform:</span> {project.platform}</p>
-                      <p><span className="font-semibold">Team size:</span> {project.teamsize}</p>
-                    </div>
-                    <Button asChild variant="outline">
-                      <Link href={project.steamLink} target="_blank" rel="noopener noreferrer">
-                        <Gamepad2 className="mr-2 h-4 w-4" />
-                        View on Steam
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
+                  <Button asChild variant="outline">
+                    <Link href={project.steamLink} target="_blank" rel="noopener noreferrer">
+                      <Gamepad2 className="mr-2 h-4 w-4" />
+                      View on Steam
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {project.images.map((img, index) => (
-                <div key={index} className="relative aspect-w-16 aspect-h-9">
-                  <Image 
-                    src={img} 
-                    alt={`Project screenshot ${index + 1}`} 
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="rounded-lg object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Role(s) and Responsibilities</h2>
-            {project.roles.map((role, index) => (
-              <div key={index} className="mb-4">
-                <h3 className="text-xl font-semibold underline mb-2">{role.title}</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  {role.responsibilities.map((responsibility, respIndex) => (
-                    <li key={respIndex}>{responsibility}</li>
-                  ))}
-                </ul>
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {project.images.map((img, index) => (
+              <div key={index} className="relative aspect-w-16 aspect-h-9">
+                <Image 
+                  src={img} 
+                  alt={`Project screenshot ${index + 1}`} 
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="rounded-lg object-cover cursor-pointer"
+                  onClick={() => setSelectedImage(img)}
+                />
               </div>
             ))}
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Game Design Highlights</h2>
-            <Card>
-              <CardHeader>
-                <CardTitle>{project.developmentProcess.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {project.developmentProcess.sections.map((section, index) => (
-                  <div key={index} className="mb-6">
-                    <h3 className="text-xl font-semibold mb-2">{section.title}</h3>
-                    {section.content && (
-                      <div className="mb-4">
-                        {section.content.map((paragraph, pIndex) => (
-                          <p key={pIndex} className="mb-2">{paragraph}</p>
-                        ))}
-                      </div>
-                    )}
-                    {section.subsections && section.subsections.map((subsection, subIndex) => (
-                      <div key={subIndex} className="mb-4">
-                        <h4 className="text-lg font-medium mb-2">{subsection.title}</h4>
-                        <ul className="list-disc list-inside">
-                          {subsection.bullets.map((bullet, bulletIndex) => (
-                            <li key={bulletIndex}>{bullet}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-                {project.developmentProcess.images && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                    {project.developmentProcess.images.map((img, imgIndex) => (
-                      <div key={imgIndex} className="relative aspect-w-16 aspect-h-9">
-                        <Image 
-                          src={img.src} 
-                          alt={img.alt} 
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          className="rounded-lg object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          </section>
-
-          <div className="text-center">
-            <Button asChild size="lg">
-              <Link href="/">Back to Portfolio</Link>
-            </Button>
           </div>
-        </main>
-      </div>
-    </>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Role(s) and Responsibilities</h2>
+          {project.roles.map((role, index) => (
+            <div key={index} className="mb-4">
+              <h3 className="text-xl font-semibold underline mb-2">{role.title}</h3>
+              <ul className="list-disc list-inside space-y-2">
+                {role.responsibilities.map((responsibility, respIndex) => (
+                  <li key={respIndex}>{responsibility}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Game Design Highlights</h2>
+          <Card>
+            <CardContent>
+              {project.developmentProcess.sections.map((section, index) => (
+                <div key={index} className="mb-6">
+                  <h3 className="text-xl font-semibold mb-2">{section.title}</h3>
+                  {section.content && (
+                    <div className="mb-4">
+                      {section.content.map((paragraph, pIndex) => (
+                        <p key={pIndex} className="mb-2">{paragraph}</p>
+                      ))}
+                    </div>
+                  )}
+                  {section.subsections && section.subsections.map((subsection, subIndex) => (
+                    <div key={subIndex} className="mb-4">
+                      <h4 className="text-lg font-medium mb-2">{subsection.title}</h4>
+                      <ul className="list-disc list-inside">
+                        {subsection.bullets.map((bullet, bulletIndex) => (
+                          <li key={bulletIndex}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                  {section.images && (
+                    <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {section.images.map((img, imgIndex) => (
+                        <div key={imgIndex} className="relative aspect-w-16 aspect-h-9">
+                          <Image 
+                            src={img.src} 
+                            alt={img.alt} 
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            className="rounded-lg object-cover cursor-pointer"
+                            onClick={() => setSelectedImage(img.src)}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {section.video && (
+                    <div className="mt-4 aspect-w-16 aspect-h-9">
+                      <iframe 
+                        src={section.video} 
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full rounded-lg"
+                      ></iframe>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </section>
+
+        <div className="text-center">
+          <Button asChild size="lg">
+            <Link href="/">Back to Portfolio</Link>
+          </Button>
+        </div>
+      </main>
+
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="relative max-w-full max-h-full">
+            <Image
+              src={selectedImage}
+              alt="Full resolution image"
+              width={1920}
+              height={1080}
+              className="max-w-full max-h-[90vh] object-contain"
+            />
+            <button
+              className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2"
+              onClick={() => setSelectedImage(null)}
+            >
+              <X size={24} />
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }

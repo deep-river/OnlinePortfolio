@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -5,6 +8,10 @@ import { Badge } from "@/components/ui/badge"
 import { GithubIcon, MailIcon, PhoneIcon } from "lucide-react"
 
 export default function Resume() {
+  useEffect(() => {
+    document.title = "Bangyu Li | Game Developer/Designer Portfolio"
+  }, [])
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="bg-primary text-primary-foreground">
@@ -24,7 +31,7 @@ export default function Resume() {
         </nav>
       </header>
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-8 md:px-24 lg:px-32 xl:px-48 py-8">
         <h1 className="text-5xl font-bold mb-4 text-center">Bangyu Li</h1>
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           <Button variant="outline" size="sm">
