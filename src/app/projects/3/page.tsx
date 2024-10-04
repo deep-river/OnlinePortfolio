@@ -1,22 +1,34 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { GithubIcon } from "lucide-react"
+import { GithubIcon, X } from "lucide-react"
 
 export default function ProjectDetail() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
+  useEffect(() => {
+    document.title = "Bangyu Li | Game Developer/Designer Portfolio"
+  }, [])
 
   const project = {
-    title: "MMORPG Demo Template",
+    title: "Fantasy RPG",
     description: "A multiplayer RPG demo showcasing my expertise in designing and implementing complex gameplay systems.",
-    steamLink: "https://store.steampowered.com/app/2351560/Apocalypse_Party/",
-    videoSrc: "https://www.youtube.com/embed/5L6_39IG5XI",
+    githubLink: "https://github.com/deep-river/mmorpg-demo-template",
+    videoSrc: "https://player.bilibili.com/player.html?isOutside=true&aid=868888473&bvid=BV1aV4y1673Y&cid=1139805795&p=1",
     images: [
-      "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png",
-      "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo03.png"
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-01.jpg",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-02.jpg",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-03.jpg",
+      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-04.jpg"
     ],
+    genre: "Simulation",
+    engine: "Unity Engine",
+    platform: "PC",
+    teamsize: "1",
     features: [
       "Networking: Implemented a C# network messaging framework using Protobuf for real-time, event-driven state synchronization of character movement, ensuring smooth and reliable multiplayer interactions.",
       "Game Systems: Developed core gameplay systems, including inventory, shop, friend list, team-up, and multi-channel chat to enrich multiplayer gameplay experience.",
@@ -43,36 +55,46 @@ export default function ProjectDetail() {
         </nav>
       </header>
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-8 md:px-24 lg:px-32 xl:px-48 py-8">
         <h1 className="text-4xl font-bold mb-8 text-center">{project.title}</h1>
         
         <section className="mb-8">
-          <Card>
-            <CardHeader>
-              <CardTitle>Project Overview</CardTitle>
-              <CardDescription>{project.description}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button asChild variant="outline">
-                <Link href={project.steamLink} target="_blank" rel="noopener noreferrer">
-                  <GithubIcon className="mr-2 h-4 w-4" />
-                  View on Github
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Demo Video</h2>
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe 
-              src={project.videoSrc} 
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/2">
+              <div className="max-w-screen-md mx-auto">
+                <div className="aspect-w-16 aspect-h-9">
+                  <iframe 
+                    src={project.videoSrc} 
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Project Overview</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 mb-4">
+                    <p><span className="font-semibold">GENRE:</span> {project.genre}</p>
+                    <p><span className="font-semibold">Engine:</span> {project.engine}</p>
+                    <p><span className="font-semibold">Platform:</span> {project.platform}</p>
+                    <p><span className="font-semibold">Team size:</span> {project.teamsize}</p>
+                  </div>
+                  <Button asChild variant="outline">
+                    <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                      <GithubIcon className="mr-2 h-4 w-4" />
+                      Github
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
 
@@ -86,7 +108,8 @@ export default function ProjectDetail() {
                   alt={`Project screenshot ${index + 1}`} 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover cursor-pointer"
+                  onClick={() => setSelectedImage(img)}
                 />
               </div>
             ))}
@@ -95,19 +118,37 @@ export default function ProjectDetail() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4">Key Features</h2>
-          <ul className="list-disc list-inside space-y-2">
-            {project.features.map((feature, index) => (
+          {project.features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
-          </ul>
         </section>
 
         <div className="text-center">
-          <Button asChild>
+          <Button asChild size="lg">
             <Link href="/">Back to Portfolio</Link>
           </Button>
         </div>
       </main>
+
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="relative max-w-full max-h-full">
+            <Image
+              src={selectedImage}
+              alt="Full resolution image"
+              width={1920}
+              height={1080}
+              className="max-w-full max-h-[90vh] object-contain"
+            />
+            <button
+              className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2"
+              onClick={() => setSelectedImage(null)}
+            >
+              <X size={24} />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
