@@ -45,7 +45,7 @@ export default function ProjectDetail() {
         {
           title: "System Design Example: Precision Strike Combo System",
           content: [
-            "In the development of Project Zero 2: Apocalypse Party, I was tasked with designing and implementing the Precision Strike Combo System, a key gameplay mechanic aimed at enhancing player engagement through timing-based attacks. This section outlines the process I followed from conceptualization to final implementation and optimization."
+            "In the development of Project Zero 2: Apocalypse Party, I was tasked with designing and implementing the Precision Strike Combo System, a key addition to the combat system aimed at enhancing player engagement through timing-based attacks. This section outlines the process I followed from conceptualization to final implementation and optimization."
           ]
         },
         {
