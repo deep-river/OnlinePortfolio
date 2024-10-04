@@ -36,13 +36,6 @@ export default function ProjectDetail() {
           "Designed and implemented new gameplay mechanics and systems using Blueprints in Unreal Engine.",
           "Collaborated closely with external translation team and led the localization for English and Korean versions."
         ]
-      },
-      {
-        title: "UI/UX Designer",
-        responsibilities: [
-          "Designed and implemented user interfaces for menus, inventory, and in-game HUD.",
-          "Created intuitive and responsive UI layouts to enhance player experience."
-        ]
       }
     ],
     developmentProcess: {
