@@ -35,7 +35,7 @@ export default function GameDevPortfolio() {
       description: "A multiplayer RPG demo showcasing complex gameplay systems, including networking, inventory management, and user interface design.",
       role: "Game Developer & Designer",
       technologies: ["Unity", "C#", "UGUI", "Protobuf"],
-      image: "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png"
+      image: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-11.png"
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ export default function GameDevPortfolio() {
       description: "An implementation of the classic Tic-Tac-Toe game with AI opponents of varying difficulty, utilizing algorithms like minimax for unbeatable gameplay.",
       role: "AI Programmer",
       technologies: ["Python", "Minimax Algorithm", "Game AI"],
-      image: "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png"
+      image: "https://raw.githubusercontent.com/deep-river/TicTacToePlayableDemo/9b7653e07bfb988ed9c80d9d1e827e56d1235192/PreviewImages/Demo01.png"
     },
   ]
 

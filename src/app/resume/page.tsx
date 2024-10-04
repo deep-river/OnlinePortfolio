@@ -5,11 +5,11 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { GithubIcon, MailIcon, PhoneIcon } from "lucide-react"
+import { GithubIcon, MailIcon, PhoneIcon, DownloadIcon } from "lucide-react"
 
 export default function Resume() {
   useEffect(() => {
-    document.title = "Bangyu Li | Game Developer/Designer Portfolio"
+    document.title = "Bangyu Li | Resume - Game Developer / Designer"
   }, [])
 
   return (
@@ -33,7 +33,7 @@ export default function Resume() {
 
       <main className="container mx-auto px-8 md:px-24 lg:px-32 xl:px-48 py-8">
         <h1 className="text-5xl font-bold mb-4 text-center">Bangyu Li</h1>
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        <div className="flex flex-wrap justify-center gap-4 mb-4">
           <Button variant="outline" size="sm">
             <MailIcon className="mr-2 h-4 w-4" />
             by.brad.li@gmail.com
@@ -46,6 +46,14 @@ export default function Resume() {
             <Link href="https://github.com/deep-river" target="_blank" rel="noopener noreferrer">
               <GithubIcon className="mr-2 h-4 w-4" />
               Github
+            </Link>
+          </Button>
+        </div>
+        <div className="flex justify-center mb-8">
+          <Button asChild>
+            <Link href="https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/resume/CV-Bangyu%20Li.pdf" target="_blank" rel="noopener noreferrer" download>
+              <DownloadIcon className="mr-2 h-4 w-4" />
+              Download Resume PDF
             </Link>
           </Button>
         </div>

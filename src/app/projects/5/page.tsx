@@ -15,12 +15,12 @@ export default function ProjectDetail() {
   }, [])
 
   const project = {
-    title: "Grappling Hook Demo",
-    description: "Recreation of the grappling hook mechanics from Sekiro: Shadows Die Twice using Unity. Implemented dynamic rope physics and hook detection to create realistic grappling behavior.",
-    githubLink: "https://github.com/deep-river/UnityGrapplingDemoLite",
+    title: "Tic-Tac-Toe",
+    description: "Implemented the Tic-Tac-Toe game with AI opponents of varying difficulty, utilizing algorithms like minimax for unbeatable difficulty level.",
+    githubLink: "https://github.com/deep-river/TicTacToePlayableDemo",
     images: [
-      "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png",
-      "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo03.png"
+      "https://raw.githubusercontent.com/deep-river/TicTacToePlayableDemo/9b7653e07bfb988ed9c80d9d1e827e56d1235192/PreviewImages/Demo01.png",
+      "https://raw.githubusercontent.com/deep-river/TicTacToePlayableDemo/9b7653e07bfb988ed9c80d9d1e827e56d1235192/PreviewImages/Demo02.png"
     ],
     engine: "Unity Engine",
     platform: "PC",
