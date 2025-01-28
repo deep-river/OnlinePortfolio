@@ -14,7 +14,7 @@ export default function GameDevPortfolio() {
 
   const gameProjects = [
     {
-      id: 1,
+      id: 5,
       title: "Apocalypse Party on Steam",
       description: "Apocalypse Party is a 3D top-down action Roguelike game. In this game, you will embark on a new mission to traverse through the Middle Ages and gradually master abilities, and arm yourself to become the strongest survivor through numerous choices.",
       role: "UE5 Technical Designer",
@@ -22,7 +22,7 @@ export default function GameDevPortfolio() {
       image: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/apocalypse-party-pc-game-steam-cover.jpg"
     },
     {
-      id: 2,
+      id: 4,
       title: "Project Party by Lilith Games",
       description: "Project Party(a.k.a. Boom! Party) is the new life simulation just announced by Lilith Games promising a mix of familiar life sim and in-game socialising, it'll also come with a packaged game editor. You'll be able to enjoy experiences ranging from shooter to horror and even more, Lilith promises.",
       role: "Technical Designer",
@@ -38,7 +38,7 @@ export default function GameDevPortfolio() {
       image: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-11.png"
     },
     {
-      id: 4,
+      id: 2,
       title: "Grappling Hook Demo",
       description: "A recreation of the grappling hook mechanics from Sekiro: Shadows Die Twice, featuring dynamic rope physics and realistic hook detection.",
       role: "Technical Designer",
@@ -46,7 +46,7 @@ export default function GameDevPortfolio() {
       image: "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png"
     },
     {
-      id: 5,
+      id: 1,
       title: "Tic-Tac-Toe AI",
       description: "An implementation of the classic Tic-Tac-Toe game with AI opponents of varying difficulty, utilizing algorithms like minimax for unbeatable gameplay.",
       role: "AI Programmer",

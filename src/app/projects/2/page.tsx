@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { X } from "lucide-react"
+import { GithubIcon, X } from "lucide-react"
 
 export default function ProjectDetail() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -15,30 +15,16 @@ export default function ProjectDetail() {
   }, [])
 
   const project = {
-    title: "Boom! Party",
-    description: "Boom! Party is an unreleased multiplayer third-person puzzle narrative game being developed for both iOS and Android using the company's game engine with a team of 300. Players will collaborate or compete with other players to solve different mystery cases, and they will communicate and vote out the killer, who can be either an NPC or another player, through various deductions.",
-    videoSrc: "https://www.youtube.com/embed/sk6lfvUOMdY",
+    title: "Grappling Hook Demo",
+    description: "Recreation of the grappling hook mechanics from Sekiro: Shadows Die Twice using Unity. Implemented dynamic rope physics and hook detection to create realistic grappling behavior.",
+    githubLink: "https://github.com/deep-river/UnityGrapplingDemoLite",
     images: [
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-01.jpg",
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-02.jpg",
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-03.jpg",
-      "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-04.jpg"
+      "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo02.png",
+      "https://raw.githubusercontent.com/deep-river/UnityGrapplingDemoLite/d6d14f34a12bddb4e40cd935f8957601b9c23cb3/PreviewImages/Demo03.png"
     ],
-    genre: "Simulation",
-    engine: "Avatar Engine",
-    platform: "Mobile",
-    teamsize: "200+",
-    roles: [
-      {
-        title: "Technical Designer",
-        responsibilities: [
-          "Collaborated with cross-functional teams and oversaw acceptance testing for physics, terrain, and matchmaking systems in the Avatar game engine.",
-          "Developed plugin tools that provided versatile technical solutions for the game design and art teams, significantly improving the production pipeline efficiency.",
-          "Designed and implemented multiple gameplay features for Project Party, including collecting mechanics and inventory systems, contributing to a more engaging player experience.",
-          "Reconstructed the cutscene editor and designed the quest system for a narrative-driven game framework (Revolver Editor), enhancing the storytelling mechanics and the usability of the Avatar game engine."
-        ]
-      }
-    ]
+    engine: "Unity Engine",
+    platform: "PC",
+    teamsize: "1"
   }
 
   return (
@@ -66,31 +52,23 @@ export default function ProjectDetail() {
         <section className="mb-8">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
-              <div className="max-w-screen-md mx-auto">
-                <div className="aspect-w-16 aspect-h-9">
-                  <iframe 
-                    src={project.videoSrc} 
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-            <div className="md:w-1/2">
               <Card>
                 <CardHeader>
-                  <CardTitle>About the game</CardTitle>
+                  <CardTitle>Project Overview</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 mb-4">
-                    <p><span className="font-semibold">GENRE:</span> {project.genre}</p>
                     <p><span className="font-semibold">Engine:</span> {project.engine}</p>
                     <p><span className="font-semibold">Platform:</span> {project.platform}</p>
                     <p><span className="font-semibold">Team size:</span> {project.teamsize}</p>
                   </div>
+                  <Button asChild variant="outline">
+                    <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                      <GithubIcon className="mr-2 h-4 w-4" />
+                      Github
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
@@ -113,20 +91,6 @@ export default function ProjectDetail() {
               </div>
             ))}
           </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Role(s) and Responsibilities</h2>
-          {project.roles.map((role, index) => (
-            <div key={index} className="mb-4">
-              <h3 className="text-xl font-semibold underline mb-2">{role.title}</h3>
-              <ul className="list-disc list-inside space-y-2">
-                {role.responsibilities.map((responsibility, respIndex) => (
-                  <li key={respIndex}>{responsibility}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </section>
 
         <div className="text-center">
