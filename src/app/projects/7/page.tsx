@@ -46,7 +46,123 @@ export default function ProjectDetail() {
           "Designed UI components for pause menu and HUD."
         ]
       }
-    ]
+    ],
+    gameDesign: {
+      genre: "3D first-person exploration puzzle game with horror/thriller elements.",
+      platforms: "PC/Web",
+      controlScheme: [
+        "WASD: Character movement",
+        "Mouse: Camera control",
+        "E Key: Interact with environmental props",
+        "F Key: Toggle camera mode",
+        "Left Click (Camera Mode): Capture photo",
+        "Left Click (Combat Mode): Fire weapon"
+      ],
+      coreGameplayLoop: [
+        "Player enters game scene",
+        "Environmental exploration",
+        "Discover and solve puzzles",
+        "Collect critical items",
+        "Use camera to detect hidden entities",
+        "Engage in evasion/combat",
+        "Achieve level objectives"
+      ],
+      levelDesign: {
+        environment: "Confined indoor/nighttime settings (e.g., derelict mansions, isolated structures) with Western architectural motifs.",
+        pacing: "Linear exploration paths guided by dynamic lighting, ambient audio cues, and object placement (e.g., flickering corridor lights directing attention).",
+        interactivity: "Contextual UI prompts (e.g., \"Requires Key\" near locked doors) and strategically placed monster triggers in open areas.",
+        reference: "Resident Evil 7 atmosphere."
+      },
+      narrativeAndProgression: {
+        synopsis: "Players assume the role of a paranormal investigator using a spectral camera to reconstruct occult events, ultimately summoning and defeating a demonic entity.",
+        keyProgression: [
+          "Phase 1: Collect clues → Solve puzzles → Reconstruct ritual site.",
+          "Phase 2: Utilize camera to expose and combat manifestations."
+        ]
+      },
+      systemArchitecture: [
+        {
+          title: "5.1 Base Character Controller",
+          description: "First-person controller with smooth movement/camera rotation."
+        },
+        {
+          title: "5.2 Interactable Objects",
+          items: [
+            "Boolean Toggle Switches: Binary state changes (e.g., light switches, drawers).",
+            "Single-Use Items: Disabled post-interaction.",
+            "Multi-State Objects: Cycle through predefined states (e.g., ritual artifacts).",
+            "Lore Fragments: Non-functional items delivering narrative via UI text."
+          ]
+        },
+        {
+          title: "5.3 Collectibles",
+          description: "Passive items tracked via UI (e.g., \"0/3 Keys Collected\"). Full collection unlocks progression."
+        },
+        {
+          title: "5.4 Entity System (Ghosts/Monsters)",
+          items: [
+            "Spawn Logic: Triggered post-ritual completion; hinted via pulsating aura/outlines.",
+            "Combat Behavior:",
+            "Visibility: Entity outlines shift color based on health (Green → Yellow → Red).",
+            "Defeat: Three shots required; audio/visual feedback for positional tracking."
+          ]
+        },
+        {
+          title: "5.5 Camera Mechanics",
+          items: [
+            "Mode: Immobilizes player; viewfinder UI simulates real-time exposure.",
+            "Function: Flashlight illuminates targets; detects spectral entities (WIP: Battery system)."
+          ]
+        },
+        {
+          title: "5.6 Combat System",
+          items: [
+            "Weapon Unlock: Assemble firearm parts scattered pre-boss arena.",
+            "Combat Design: Burst-fire mechanics with cooldown constraints."
+          ]
+        },
+        {
+          title: "5.7 Quest System",
+          items: [
+            "Investigation Journal: Diegetic UI displaying objectives, photos, and lore.",
+            "Task Types:",
+            "1. Photo-Matching: Recreate reference images to spawn critical items.",
+            "2. Item-Chain Puzzles: Sequential interactions (e.g., fuse → breaker box).",
+            "3. Multi-State Challenges: Adjust objects to predefined configurations.",
+            "Progress Manager: Tracks collectibles/puzzle states; updates UI dynamically."
+          ]
+        },
+        {
+          title: "5.8 UI Framework",
+          items: [
+            "Main Menu: Start/Load/Settings/Quit.",
+            "Pause Menu: Resume/Restart/Quit.",
+            "HUD: Real-time tracking (e.g., \"Entities Found: 0/3\").",
+            "Investigation Journal: Toggleable via hotkey; scrollable text/image panels.",
+            "Contextual Prompts: \"Press F\" indicators near interactables."
+          ]
+        }
+      ],
+      artAssetRequirements: {
+        core: [
+          "Modular indoor environments (walls, furniture).",
+          "Entity models (specters, mutants)."
+        ],
+        advanced: "Dynamic lighting rigs, VFX for spectral detection."
+      },
+      playerExperienceDesign: {
+        emotionalArc: [
+          "Early Game: Gradual puzzle escalation to sustain engagement.",
+          "Mid-Game: Timed challenges to induce tension.",
+          "Finale: Low-skill-ceiling boss fights for cathartic payoff."
+        ],
+        flowTheoryIntegration: [
+          "Per-level cycles of relaxation → tension → accomplishment.",
+          "At least one stress → climax → resolution sequence per session."
+        ],
+        reference: "Flow Theory in Game Design - https://gameinstitute.qq.com/knowledge/100023"
+      }
+    }
   }
 
   const formatDescription = (description: string) => {
@@ -154,6 +270,101 @@ export default function ProjectDetail() {
               </ul>
             </div>
           ))}
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Game Design Highlights</h2>
+          <Card>
+            <CardContent className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-2">System Design Document For Horror-Themed Exploration Puzzle Game</h3>
+                <p><strong>Genre:</strong> {project.gameDesign.genre}</p>
+                <p><strong>Platforms:</strong> {project.gameDesign.platforms}</p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2">1. Control Scheme</h3>
+                <ul className="list-disc list-inside">
+                  {project.gameDesign.controlScheme.map((control, index) => (
+                    <li key={index}>{control}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2">2. Core Gameplay Loop</h3>
+                <ol className="list-decimal list-inside">
+                  {project.gameDesign.coreGameplayLoop.map((step, index) => (
+                    <li key={index}>{step}</li>
+                  ))}
+                </ol>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2">3. Level Design Framework</h3>
+                <p><strong>Environment:</strong> {project.gameDesign.levelDesign.environment}</p>
+                <p><strong>Pacing:</strong> {project.gameDesign.levelDesign.pacing}</p>
+                <p><strong>Interactivity:</strong> {project.gameDesign.levelDesign.interactivity}</p>
+                <p><strong>Reference:</strong> {project.gameDesign.levelDesign.reference}</p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2">4. Narrative & Progression</h3>
+                <p><strong>Synopsis:</strong> {project.gameDesign.narrativeAndProgression.synopsis}</p>
+                <p><strong>Key Progression:</strong></p>
+                <ul className="list-disc list-inside">
+                  {project.gameDesign.narrativeAndProgression.keyProgression.map((phase, index) => (
+                    <li key={index}>{phase}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2">5. System Architecture</h3>
+                {project.gameDesign.systemArchitecture.map((system, index) => (
+                  <div key={index} className="mb-4">
+                    <h4 className="text-lg font-medium">{system.title}</h4>
+                    {system.description && <p>{system.description}</p>}
+                    {system.items && (
+                      <ul className="list-disc list-inside">
+                        {system.items.map((item, itemIndex) => (
+                          <li key={itemIndex}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2">6. Art Asset Requirements</h3>
+                <p><strong>Core:</strong></p>
+                <ul className="list-disc list-inside">
+                  {project.gameDesign.artAssetRequirements.core.map((asset, index) => (
+                    <li key={index}>{asset}</li>
+                  ))}
+                </ul>
+                <p><strong>Advanced:</strong> {project.gameDesign.artAssetRequirements.advanced}</p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2">7. Player Experience Design</h3>
+                <p><strong>Emotional Arc:</strong></p>
+                <ul className="list-disc list-inside">
+                  {project.gameDesign.playerExperienceDesign.emotionalArc.map((phase, index) => (
+                    <li key={index}>{phase}</li>
+                  ))}
+                </ul>
+                <p><strong>Flow Theory Integration:</strong></p>
+                <ul className="list-disc list-inside">
+                  {project.gameDesign.playerExperienceDesign.flowTheoryIntegration.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+                <p><strong>Reference:</strong> {project.gameDesign.playerExperienceDesign.reference}</p>
+              </div>
+            </CardContent>
+          </Card>
         </section>
 
         <div className="text-center">
