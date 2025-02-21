@@ -131,6 +131,32 @@ export default function Resume() {
         <section className="mb-8">
           <h2 className="text-3xl font-bold mb-4">Projects</h2>
           <Card className="mb-4">
+          <CardHeader>
+            <CardTitle className="text-2xl">Light CatRun</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex space-x-4 mb-2">
+              <Button variant="outline" size="sm" asChild>
+                <Link href="https://www.taptap.cn/app/727882" target="_blank" rel="noopener noreferrer">
+                  View on TapTap
+                </Link>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="https://oguri-ridge.itch.io/light-catrun" target="_blank" rel="noopener noreferrer">
+                  View on Itch.io
+                </Link>
+              </Button>
+            </div>
+            <p className="mb-2">A 2D casual puzzle game developed for the 2024 TapTap Spotlight GameJam using Unity. Nominated for 'Best Game', 'Best Theme & Narrative', and 'Best Visual & Audio', and awarded 'Best Visual & Audio'.</p>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Developed functionalities for interactive objects, including light poles, platforms, and character spawn points.</li>
+              <li>Implemented 2D character animation controller using an animation state machine.</li>
+              <li>Implemented post-processing effects.</li>
+              <li>Implemented UI features for the start screen, pause menu, and HUD.</li>
+            </ul>
+          </CardContent>
+        </Card>
+          <Card className="mb-4">
             <CardHeader>
               <CardTitle className="text-2xl">Fantasy RPG Demo</CardTitle>
             </CardHeader>
