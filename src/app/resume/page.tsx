@@ -147,7 +147,7 @@ export default function Resume() {
                 </Link>
               </Button>
             </div>
-            <p className="mb-2">A 2D casual puzzle game developed for the 2024 TapTap Spotlight GameJam using Unity. Nominated for 'Best Game', 'Best Theme & Narrative', and 'Best Visual & Audio', and awarded 'Best Visual & Audio'.</p>
+            <p className="mb-2">A 2D casual puzzle game developed for the 2024 TapTap Spotlight GameJam using Unity. Nominated for &apos;Best Game&apos;, &apos;Best Theme &amp; Narrative&apos;, and &apos;Best Visual &amp; Audio&apos;, and awarded &apos;Best Visual &amp; Audio&apos;.</p>
             <ul className="list-disc list-inside space-y-2">
               <li>Developed functionalities for interactive objects, including light poles, platforms, and character spawn points.</li>
               <li>Implemented 2D character animation controller using an animation state machine.</li>
