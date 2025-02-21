@@ -14,6 +14,14 @@ export default function GameDevPortfolio() {
 
   const gameProjects = [
     {
+      id: 7,
+      title: "Phantom Flash",
+      description: "Navigate a haunted mansion using your investigative journal and spectral camera to uncover hidden truths in this atmospheric horror-puzzle adventure. Brave eerie encounters and solve environmental riddles while evading vengeful spirits trapped within the mist.",
+      role: "Unity Programmer & System Designer",
+      technologies: ["Unity", "GameJam", "3D Game"],
+      image: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/PhantomFlash-StartScreen.jpg"
+    },
+    {
       id: 6,
       title: "Light Cat Run",
       description: "An adorable puzzle adventure where you use your laser pointer to lure a group of cats, interact with the environment, and plan the perfect escape from roaming monsters. An award-winning entry for the 2024 TapTap Spotlight GameJam, celebrated for its Best Visual & Audio.",
