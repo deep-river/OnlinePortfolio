@@ -14,6 +14,14 @@ export default function GameDevPortfolio() {
 
   const gameProjects = [
     {
+      id: 6,
+      title: "Light Cat Run",
+      description: "An adorable puzzle adventure where you use your laser pointer to lure a group of cats, interact with the environment, and plan the perfect escape from roaming monsters. An award-winning entry for the 2024 TapTap Spotlight GameJam, celebrated for its Best Visual & Audio.",
+      role: "Unity Programmer",
+      technologies: ["Unity", "GameJam", "2D Game"],
+      image: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-TitleScreen.jpg"
+    },
+    {
       id: 5,
       title: "Apocalypse Party on Steam",
       description: "Apocalypse Party is a 3D top-down action Roguelike game. In this game, you will embark on a new mission to traverse through the Middle Ages and gradually master abilities, and arm yourself to become the strongest survivor through numerous choices.",
