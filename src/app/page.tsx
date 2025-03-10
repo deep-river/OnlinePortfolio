@@ -14,6 +14,14 @@ export default function GameDevPortfolio() {
 
   const gameProjects = [
     {
+      id: 8,
+      title: "Three.js Rendering Pipeline Demo",
+      description: "An interactive educational visualization of the 3D graphics rendering pipeline implemented using Three.js and React. This project allows students, educators, and graphics enthusiasts to explore each stage of the pipeline interactively, helping to demystify the complex processes that transform 3D data into 2D images.",
+      role: "Full Stack Developer & Graphics Programmer",
+      technologies: ["Three.js", "React", "WebGL", "GLSL", "TypeScript"],
+      image: "https://raw.githubusercontent.com/deep-river/ThreeJSRenderingPipelineDemo/refs/heads/main/Screenshots/ThreeJSRPD-01.jpg"
+    },
+    {
       id: 7,
       title: "Phantom Flash",
       description: "Navigate a haunted mansion using your investigative journal and spectral camera to uncover hidden truths in this atmospheric horror-puzzle adventure. Brave eerie encounters and solve environmental riddles while evading vengeful spirits trapped within the mist.",
