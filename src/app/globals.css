@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -91,5 +93,10 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .font-gametext {
+    font-family: 'Exo 2', sans-serif;
+    font-style: italic;
+    font-weight: 400;
   }
 }

@@ -99,27 +99,33 @@ export default function GameDevPortfolio() {
       </header>
 
       <main className="container mx-auto px-8 md:px-24 lg:px-32 xl:px-48 py-8">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-4">Bangyu Li</h1>
-          <div className="max-w-2xl mx-auto">
-            <p className="text-xl mb-6 text-left">
-              Game developer and designer passionate about creating immersive experiences. With a strong background in both development and design, I strive to craft engaging and innovative games that push the boundaries of interactive entertainment.
+        <section className="text-center mb-12">
+          <h1 className="text-5xl font-bold mb-6 font-display">Bangyu Li</h1>
+          
+          <div className="max-w-4xl mx-auto bg-black/5 dark:bg-white/5 rounded-lg p-6 backdrop-blur-sm">
+            <p className="text-lg mb-4 text-left font-gametext font-bold leading-snug tracking-wide whitespace-pre-wrap px-0 md:px-2">
+              {`Games aren't just what I make, it's what I breathe. If you're looking for a passionate technical designer/gameplay programmer, you are looking for me.
+
+I'm currently wrapping up my MSc in Computer Game Engineering at Newcastle University and have two years of industry experience as a Technical Designer. I've honed my skills in system design, level design, OpenGL rendering, physics simulation, game engine technology, tool programming, gameplay development, and more. 
+
+I'm on the lookout for opportunities as a technical designer and gameplay programmer—let's connect.`}
             </p>
           </div>
-          <div className="flex justify-center space-x-4">
-            <Button asChild variant="outline">
+          
+          <div className="flex justify-center space-x-4 mt-6">
+            <Button asChild variant="outline" className="hover:scale-105 transition-transform">
               <Link href="https://www.linkedin.com/in/bangyu-li/" target="_blank" rel="noopener noreferrer">
                 <LinkedinIcon className="mr-2 h-4 w-4" />
                 LinkedIn
               </Link>
             </Button>
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" className="hover:scale-105 transition-transform">
               <Link href="mailto:by.brad.li@gmail.com">
                 <MailIcon className="mr-2 h-4 w-4" />
                 Email
               </Link>
             </Button>
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" className="hover:scale-105 transition-transform">
               <Link href="https://github.com/deep-river" target="_blank" rel="noopener noreferrer">
                 <GithubIcon className="mr-2 h-4 w-4" />
                 GitHub
@@ -144,7 +150,11 @@ export default function GameDevPortfolio() {
                   </div>
                   <div className="md:w-2/3 p-6">
                     <CardHeader>
-                      <CardTitle>{project.title}</CardTitle>
+                      <Link href={`/projects/${project.id}`} className="cursor-pointer">
+                        <CardTitle className="text-2xl hover:text-primary transition-colors">
+                          {project.title}
+                        </CardTitle>
+                      </Link>
                       <CardDescription>{project.role}</CardDescription>
                     </CardHeader>
                     <CardContent>
