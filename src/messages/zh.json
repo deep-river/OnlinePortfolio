@@ -1,0 +1,33 @@
+{
+  "Navigation": {
+    "portfolio": "作品集",
+    "resume": "简历"
+  },
+  "ProjectDetails": {
+    "backToPortfolio": "返回作品集",
+    "screenshots": "截图",
+    "rolesAndResponsibilities": "角色与职责",
+    "aboutProject": "关于项目",
+    "liveDemo": "在线演示",
+    "viewCode": "查看代码",
+    "viewOnSteam": "在Steam上查看",
+    "genre": "类型",
+    "engine": "引擎",
+    "platform": "平台",
+    "teamsize": "团队规模",
+    "releaseDate": "发布日期"
+  },
+  "PortfolioPage": {
+    "myProjects": "我的项目",
+    "moreDetails": "更多详情",
+    "personalStatement": "游戏不仅是我的工作，更是我的热爱。如果你正在寻找一位充满激情的技术设计师/游戏玩法程序员，那么你就是在寻找我。\n\n我目前正在纽卡斯尔大学完成计算机游戏工程硕士学位，并有两年的行业经验担任技术设计师。我在系统设计、关卡设计、OpenGL渲染、物理模拟、游戏引擎技术、工具编程、游戏玩法开发等方面都有丰富经验。\n\n我正在寻找技术设计师和游戏玩法程序员的机会—让我们一起合作吧。"
+  },
+  "SocialLinks": {
+    "linkedin": "领英",
+    "email": "邮箱",
+    "github": "GitHub"
+  },
+  "Common": {
+    "fullName": "李邦宇"
+  }
+} 
