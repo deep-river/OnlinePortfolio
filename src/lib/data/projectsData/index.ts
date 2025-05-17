@@ -1,16 +1,28 @@
 import { ProjectData } from "@/lib/types/project";
 import phantomFlashEN from "./phantom-flash/en";
 import phantomFlashZH from "./phantom-flash/zh";
+import threeJSPipelineEN from "./threejs-rendering-pipeline/en";
+import threeJSPipelineZH from "./threejs-rendering-pipeline/zh";
+import apocalypsePartyEN from "./apocalypse-party/en";
+import apocalypsePartyZH from "./apocalypse-party/zh";
+import lightCatRunEN from "./light-cat-run/en";
+import lightCatRunZH from "./light-cat-run/zh";
 
 // 项目数据映射，按语言和项目ID组织
 export const projectsData: Record<string, Record<string, ProjectData>> = {
   en: {
     "phantom-flash": phantomFlashEN,
-    // 其他项目...
+    "threejs-rendering-pipeline": threeJSPipelineEN,
+    "apocalypse-party": apocalypsePartyEN,
+    "light-cat-run": lightCatRunEN,
+    // 随着更多项目添加到markdown化的数据模型中，在这里添加
   },
   zh: {
     "phantom-flash": phantomFlashZH,
-    // 其他项目...
+    "threejs-rendering-pipeline": threeJSPipelineZH,
+    "apocalypse-party": apocalypsePartyZH,
+    "light-cat-run": lightCatRunZH,
+    // 随着更多项目添加到markdown化的数据模型中，在这里添加
   }
 };
 

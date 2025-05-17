@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { allProjects } from '@/lib/data/projects';
-import type { ProjectData } from '@/lib/types/project';
+import { getProjectByLocaleAndId } from '@/lib/data/projectsData';
+import type { ProjectSection } from '@/lib/types/project';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,29 +11,32 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { GithubIcon, ExternalLink, Gamepad2, X } from "lucide-react";
 import MediaDisplay from '@/components/projects/MediaDisplay';
 import ProjectSectionRenderer from '@/components/projects/ProjectSectionRenderer';
+import { useParams } from 'next/navigation';
 
-interface ProjectDetailPageProps {
-  params: { id: string };
-}
-
-export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+export default function ProjectDetail() {
+  const params = useParams();
+  const projectId = params.id as string;
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const project = allProjects.find(p => p.id === params.id);
-
+  
+  // 默认使用中文数据
+  const project = getProjectByLocaleAndId('zh', projectId);
+  
   useEffect(() => {
-    if (project) {
-      document.title = `${project.title} | Bangyu Li Portfolio`;
-    }
+    document.title = project ? `${project.title} | Bangyu Li Portfolio` : 'Project Not Found';
   }, [project]);
 
+  // 如果找不到项目数据，返回404
   if (!project) {
     notFound();
   }
 
-  // 格式化多行描述
+  // 格式化描述文本（处理换行符）
   const formatDescription = (description: string) => {
     return description.split('\n').map((line, index) => (
-      <span key={index}>{line}<br /></span>
+      <span key={index}>
+        {line}
+        <br />
+      </span>
     ));
   };
 

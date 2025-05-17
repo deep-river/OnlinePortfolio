@@ -6,15 +6,15 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { LinkedinIcon, MailIcon, GithubIcon } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { allProjects } from '@/lib/data/projects' // 引入集中式数据
+import { getProjectsByLocale } from '@/lib/data/projectsData' // 引入项目数据函数
 
 export default function GameDevPortfolio() {
   useEffect(() => {
     document.title = "Bangyu Li | 游戏开发/设计师作品集"
   }, [])
 
-  // 使用集中式数据源
-  const gameProjects = allProjects;
+  // 使用getProjectsByLocale获取项目数据，默认获取中文项目
+  const gameProjects = getProjectsByLocale('zh');
 
   return (
     <div className="min-h-screen bg-background text-foreground">
