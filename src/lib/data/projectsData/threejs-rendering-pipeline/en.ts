@@ -1,5 +1,5 @@
 import { ProjectData } from '@/lib/types/project';
-import { rolesMarkdown, featuresMarkdown } from './markdown-en';
+import { rolesMarkdown, featuresMarkdown, highlightsMarkdown } from './markdown-en';
 
 const threeJSPipelineEN: ProjectData = {
   id: "threejs-rendering-pipeline",
@@ -13,11 +13,11 @@ const threeJSPipelineEN: ProjectData = {
     alt: "Three.js Rendering Pipeline Demo Screenshot"
   },
   
-  overviewDescription: "An interactive educational visualization of the 3D graphics rendering pipeline implemented using Three.js and React. This project allows students, educators, and graphics enthusiasts to explore each stage of the pipeline interactively, helping to demystify the complex processes that transform 3D data into 2D images.",
+  overviewDescription: "An interactive educational visualization of the 3D graphics rendering pipeline implemented using Three.js and React. This project provides a comprehensive visualization of the modern 3D graphics rendering pipeline. It allows users to explore each stage of the pipeline interactively, helping to demostrate the complex processes that transform 3D data into 2D images on your screen.",
   
   projectInfo: {
-    technology: "Three.js, React, GLSL",
-    language: "TypeScript",
+    technology: "Three.js, React, Tailwind CSS",
+    language: "TypeScript, GLSL",
     platform: "Web",
     teamsize: "1"
   },
@@ -62,6 +62,17 @@ const threeJSPipelineEN: ProjectData = {
       ]
     },
     {
+      id: "technologies",
+      title: "Technologies",
+      content: [
+        {
+          type: "list",
+          items: ["Three.js", "React", "WebGL", "GLSL"]
+        }
+      ],
+      hideInDetailPage: true
+    },
+    {
       id: "features",
       title: "Project Features",
       content: [
@@ -72,12 +83,12 @@ const threeJSPipelineEN: ProjectData = {
       ]
     },
     {
-      id: "technologies",
-      title: "Technologies",
+      id: "highlights",
+      title: "Technical Implementation Highlights",
       content: [
         {
-          type: "list",
-          items: ["Three.js", "React", "WebGL", "GLSL", "TypeScript"]
+          type: "markdown",
+          markdown: highlightsMarkdown
         }
       ]
     }

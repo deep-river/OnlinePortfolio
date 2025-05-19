@@ -10,13 +10,13 @@ const phantomFlashEN: ProjectData = {
   heroMedia: {
     type: "video",
     src: "https://www.youtube.com/embed/MMQU5rFLW-M",
-    alt: "Phantom Flash Gameplay Trailer"
+    alt: "Phantom Flash Gameplay Video"
   },
   
   overviewDescription: "Embark on a unique horror puzzle adventure. In this game, you will follow the clues in your investigation note and use your camera to explore the mist-covered house. Encounter eerie events and face terrifying spirits in your quest to uncover the truth. Can you survive the mystery and defeat the evil forces lurking within?\n\nA submission to the NUGDS Winter Jam 2025, hosted by the Newcastle University Game Dev Society. Ranked 1st among 8 entries.",
   
   projectInfo: {
-    genre: "3D, Indie, Horror, Puzzle",
+    genre: "3D, Horror, Puzzle",
     engine: "Unity",
     platform: "PC",
     teamsize: "5",
@@ -74,6 +74,17 @@ const phantomFlashEN: ProjectData = {
           markdown: rolesMarkdown
         }
       ]
+    },
+    {
+      id: "technologies",
+      title: "Technologies",
+      content: [
+        {
+          type: "list",
+          items: ["Unity", "GameJam", "3D Game"]
+        }
+      ],
+      hideInDetailPage: true
     },
     {
       id: "design-highlights",

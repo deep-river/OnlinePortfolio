@@ -25,6 +25,7 @@ export interface ProjectSection {
   title: string; // Section title, e.g., "Screenshots", "Role(s) and Responsibilities"
   layout?: 'single-column' | 'two-column-image-left' | 'two-column-image-right'; // Optional layout hint
   content: ProjectSectionContent[]; // Flexible content blocks within a section
+  hideInDetailPage?: boolean; // 是否在详情页中隐藏该部分
 }
 
 export interface ProjectData {

@@ -8,30 +8,21 @@ const lightCatRunEN: ProjectData = {
   thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-TitleScreen.jpg",
   
   heroMedia: {
-    type: 'image',
-    src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-TitleScreen.jpg",
-    alt: "Light Cat Run Title Screen"
+    type: 'video',
+    src: "https://www.youtube.com/embed/Di3FPUJvcQ4",
+    alt: "Light Cat Run Gameplay Video"
   },
   
   overviewDescription: "An adorable puzzle adventure where you use your laser pointer to lure a group of cats, interact with the environment, and plan the perfect escape from roaming monsters. An award-winning entry for the 2024 TapTap Spotlight GameJam, celebrated for its Best Visual & Audio.",
   
   projectInfo: {
-    genre: "Puzzle Adventure",
+    genre: "2D, Casual, Puzzle",
     engine: "Unity",
     platform: "PC",
-    teamsize: "3"
+    teamsize: "5"
   },
   
-  roles: [
-    {
-      title: "Unity Programmer",
-      responsibilities: [
-        "Implemented core gameplay mechanics",
-        "Developed cat AI and behavior systems",
-        "Created environmental interaction systems"
-      ]
-    }
-  ],
+  mainRole: "Unity Programmer & System Designer",
   
   detailedSections: [
     {
@@ -83,7 +74,8 @@ const lightCatRunEN: ProjectData = {
           type: "list",
           items: ["Unity", "GameJam", "2D Game", "AI Systems"]
         }
-      ]
+      ],
+      hideInDetailPage: true
     }
   ]
 };

@@ -13,15 +13,15 @@ export const projectsData: Record<string, Record<string, ProjectData>> = {
   en: {
     "threejs-rendering-pipeline": threeJSPipelineEN,
     "phantom-flash": phantomFlashEN,
-    "apocalypse-party": apocalypsePartyEN,
     "light-cat-run": lightCatRunEN,
+    "apocalypse-party": apocalypsePartyEN,
     // 随着更多项目添加到markdown化的数据模型中，在这里添加
   },
   zh: {
     "threejs-rendering-pipeline": threeJSPipelineZH,
     "phantom-flash": phantomFlashZH,
-    "apocalypse-party": apocalypsePartyZH,
     "light-cat-run": lightCatRunZH,
+    "apocalypse-party": apocalypsePartyZH,
     // 随着更多项目添加到markdown化的数据模型中，在这里添加
   }
 };

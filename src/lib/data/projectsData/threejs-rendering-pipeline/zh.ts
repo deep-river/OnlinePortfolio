@@ -26,6 +26,8 @@ const threeJSPipelineZH: ProjectData = {
     github: "https://github.com/deep-river/ThreeJSRenderingPipelineDemo",
     liveDemo: "https://threejsrenderingpipelinedemo.vercel.app/"
   },
+
+  mainRole: "全栈开发者 & 图形程序员",
   
   detailedSections: [
     {
@@ -77,7 +79,8 @@ const threeJSPipelineZH: ProjectData = {
           type: "list",
           items: ["Three.js", "React", "WebGL", "GLSL", "TypeScript"]
         }
-      ]
+      ],
+      hideInDetailPage: true
     }
   ]
 };

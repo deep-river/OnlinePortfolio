@@ -110,9 +110,12 @@ export default function ProjectDetail() {
         </section>
 
         {/* 渲染详细章节 */}
-        {project.detailedSections.map(section => (
-          <ProjectSectionRenderer key={section.id} section={section} setSelectedImage={setSelectedImage} />
-        ))}
+        {project.detailedSections
+          .filter(section => !section.hideInDetailPage)
+          .map(section => (
+            <ProjectSectionRenderer key={section.id} section={section} setSelectedImage={setSelectedImage} />
+          ))
+        }
 
         <div className="text-center mt-12">
           <Button asChild size="lg">
