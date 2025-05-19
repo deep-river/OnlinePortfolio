@@ -74,11 +74,12 @@ export default function ProjectDetail() {
             </CardHeader>
             <CardContent>
               <div className="space-y-2 mb-4">
+                {project.projectInfo.technology && <p><span className="font-semibold">技术栈:</span> {project.projectInfo.technology}</p>}
                 {project.projectInfo.genre && <p><span className="font-semibold">类型:</span> {project.projectInfo.genre}</p>}
                 {project.projectInfo.engine && <p><span className="font-semibold">引擎:</span> {project.projectInfo.engine}</p>}
+                {project.projectInfo.language && <p><span className="font-semibold">语言:</span> {project.projectInfo.language}</p>}
                 {project.projectInfo.platform && <p><span className="font-semibold">平台:</span> {project.projectInfo.platform}</p>}
                 {project.projectInfo.teamsize && <p><span className="font-semibold">团队规模:</span> {project.projectInfo.teamsize}</p>}
-                {project.projectInfo.releaseDate && <p><span className="font-semibold">发布日期:</span> {project.projectInfo.releaseDate}</p>}
               </div>
               <div className="flex flex-wrap gap-2">
                 {project.links?.liveDemo && (
@@ -107,23 +108,6 @@ export default function ProjectDetail() {
             </CardContent>
           </Card>
         </section>
-
-        {/* 角色和职责 */}
-        {project.roles && project.roles.length > 0 && (
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">角色与职责</h2>
-            {project.roles.map((role, index) => (
-              <div key={index} className="mb-4">
-                <h3 className="text-xl font-semibold mb-2">{role.title}</h3>
-                <ul className="list-disc list-inside space-y-1">
-                  {role.responsibilities.map((resp, respIndex) => (
-                    <li key={respIndex}>{resp}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </section>
-        )}
 
         {/* 渲染详细章节 */}
         {project.detailedSections.map(section => (

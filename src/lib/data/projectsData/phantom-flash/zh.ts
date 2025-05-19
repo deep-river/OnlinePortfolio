@@ -2,14 +2,14 @@ import { ProjectData } from '@/lib/types/project';
 
 const phantomFlashZH: ProjectData = {
   id: "phantom-flash",
-  title: "幽灵闪烁",
+  title: "Phantom Flash",
   shortDescription: "一款第一人称恐怖解谜游戏，你将使用特殊相机探索闹鬼的房子，揭示超自然实体。",
-  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/PhantomFlash-Thumbnail.jpg",
+  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/PhantomFlash-StartScreen.jpg",
   
   heroMedia: {
     type: "video",
     src: "https://www.youtube.com/embed/MMQU5rFLW-M",
-    alt: "幽灵闪烁游戏预告片"
+    alt: "Phantom Flash实机演示",
   },
   
   overviewDescription: "踏上一段独特的恐怖解谜冒险。在这款游戏中，你将跟随调查笔记中的线索，使用相机探索被雾笼罩的房子。在揭开真相的过程中，你将遭遇诡异事件并面对可怕的幽灵。你能在这片神秘之地生存下来并击败潜伏的邪恶力量吗？\n\n这是提交给纽卡斯尔大学游戏开发协会（NUGDS）2025冬季游戏开发比赛的作品。在8个参赛作品中排名第一。",
@@ -24,24 +24,8 @@ const phantomFlashZH: ProjectData = {
   links: {
     itchio: "https://oguri-ridge.itch.io/phantomflash",
   },
-  
-  roles: [
-    {
-      title: "游戏玩法程序员",
-      responsibilities: [
-        "实现多种解谜机制。",
-        "使用UGUI开发UI系统，包括开始界面、暂停菜单和HUD界面。"
-      ]
-    },
-    {
-      title: "系统设计师",
-      responsibilities: [
-        "设计核心游戏循环和交互体验，平衡探索/解谜节奏。",
-        "设计所有游戏内解谜，平衡游戏进度和上下文反馈。",
-        "设计暂停菜单和HUD的UI组件。"
-      ]
-    }
-  ],
+
+  mainRole: "Unity程序 & 系统策划",
   
   detailedSections: [
     {
@@ -86,7 +70,7 @@ const phantomFlashZH: ProjectData = {
       content: [
         {
           type: "heading",
-          text: "游戏玩法程序员",
+          text: "Unity程序",
           level: 1
         },
         {
@@ -98,7 +82,7 @@ const phantomFlashZH: ProjectData = {
         },
         {
           type: "heading",
-          text: "系统设计师",
+          text: "系统策划",
           level: 1
         },
         {

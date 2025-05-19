@@ -16,8 +16,8 @@ const threeJSPipelineEN: ProjectData = {
   overviewDescription: "An interactive educational visualization of the 3D graphics rendering pipeline implemented using Three.js and React. This project allows students, educators, and graphics enthusiasts to explore each stage of the pipeline interactively, helping to demystify the complex processes that transform 3D data into 2D images.",
   
   projectInfo: {
-    genre: "Educational Visualization",
-    engine: "Three.js",
+    technology: "Three.js, React, GLSL",
+    language: "TypeScript",
     platform: "Web",
     teamsize: "1"
   },
@@ -27,16 +27,7 @@ const threeJSPipelineEN: ProjectData = {
     liveDemo: "https://threejsrenderingpipelinedemo.vercel.app/"
   },
   
-  roles: [
-    {
-      title: "Full Stack Developer & Graphics Programmer",
-      responsibilities: [
-        "Implemented the 3D rendering pipeline visualization using Three.js",
-        "Created interactive UI components with React",
-        "Developed custom shaders with GLSL"
-      ]
-    }
-  ],
+  mainRole: "Full Stack Developer & Graphics Programmer",
   
   detailedSections: [
     {

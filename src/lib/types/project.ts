@@ -38,11 +38,12 @@ export interface ProjectData {
   overviewDescription: string; // Longer description for the detail page
   
   projectInfo: {
+    technology?: string;
     genre?: string;
     engine?: string;
+    language?: string;
     platform?: string;
     teamsize?: string;
-    releaseDate?: string; 
   };
 
   links?: {
@@ -54,7 +55,7 @@ export interface ProjectData {
     bilibili?: string;
   };
   
-  roles?: ProjectRole[];
+  mainRole?: string;
   features?: string[]; // Simple list of features
   
   // For more complex, structured content

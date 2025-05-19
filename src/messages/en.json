@@ -11,8 +11,10 @@
     "liveDemo": "Live Demo",
     "viewCode": "View Code",
     "viewOnSteam": "View on Steam",
+    "technology": "Technology",
     "genre": "Genre",
     "engine": "Engine",
+    "language": "Language",
     "platform": "Platform",
     "teamsize": "Team Size",
     "releaseDate": "Release Date"

@@ -5,7 +5,7 @@ const phantomFlashEN: ProjectData = {
   id: "phantom-flash",
   title: "Phantom Flash",
   shortDescription: "A first-person horror puzzle game where you explore a haunted house using a special camera that reveals supernatural entities.",
-  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/PhantomFlash-Thumbnail.jpg",
+  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/PhantomFlash-StartScreen.jpg",
   
   heroMedia: {
     type: "video",
@@ -25,24 +25,8 @@ const phantomFlashEN: ProjectData = {
   links: {
     itchio: "https://oguri-ridge.itch.io/phantomflash",
   },
-  
-  roles: [
-    {
-      title: "Gameplay Programmer",
-      responsibilities: [
-        "Implemented multiple puzzle mechanics.",
-        "Developed UI system including Start Screen, Pause Menu, and HUD interfaces with UGUI."
-      ]
-    },
-    {
-      title: "System Designer",
-      responsibilities: [
-        "Designed core gameplay loop and interactive experience balancing exploration/puzzle pacing.",
-        "Crafted all in-game puzzles with progression balancing and contextual feedback.",
-        "Designed UI components for pause menu and HUD."
-      ]
-    }
-  ],
+
+  mainRole: "Unity Programmer & System Designer",
   
   detailedSections: [
     {

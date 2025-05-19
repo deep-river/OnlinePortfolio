@@ -57,11 +57,12 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2 mb-4">
+                      {project.projectInfo.technology && <p><span className="font-semibold">{t('technology')}:</span> {project.projectInfo.technology}</p>}
                       {project.projectInfo.genre && <p><span className="font-semibold">{t('genre')}:</span> {project.projectInfo.genre}</p>}
                       {project.projectInfo.engine && <p><span className="font-semibold">{t('engine')}:</span> {project.projectInfo.engine}</p>}
+                      {project.projectInfo.language && <p><span className="font-semibold">{t('language')}:</span> {project.projectInfo.language}</p>}
                       {project.projectInfo.platform && <p><span className="font-semibold">{t('platform')}:</span> {project.projectInfo.platform}</p>}
                       {project.projectInfo.teamsize && <p><span className="font-semibold">{t('teamsize')}:</span> {project.projectInfo.teamsize}</p>}
-                      {project.projectInfo.releaseDate && <p><span className="font-semibold">{t('releaseDate')}:</span> {project.projectInfo.releaseDate}</p>}
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {project.links?.liveDemo && (

@@ -76,7 +76,7 @@ export default function GameDevPortfolio() {
                         </CardTitle>
                       </Link>
                       <CardDescription>
-                        {project.roles && project.roles.length > 0 ? project.roles[0].title : ''}
+                        {project.mainRole || ''}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>

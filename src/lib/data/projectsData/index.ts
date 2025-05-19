@@ -11,15 +11,15 @@ import lightCatRunZH from "./light-cat-run/zh";
 // 项目数据映射，按语言和项目ID组织
 export const projectsData: Record<string, Record<string, ProjectData>> = {
   en: {
-    "phantom-flash": phantomFlashEN,
     "threejs-rendering-pipeline": threeJSPipelineEN,
+    "phantom-flash": phantomFlashEN,
     "apocalypse-party": apocalypsePartyEN,
     "light-cat-run": lightCatRunEN,
     // 随着更多项目添加到markdown化的数据模型中，在这里添加
   },
   zh: {
-    "phantom-flash": phantomFlashZH,
     "threejs-rendering-pipeline": threeJSPipelineZH,
+    "phantom-flash": phantomFlashZH,
     "apocalypse-party": apocalypsePartyZH,
     "light-cat-run": lightCatRunZH,
     // 随着更多项目添加到markdown化的数据模型中，在这里添加
