@@ -21,9 +21,10 @@ SyntaxHighlighter.registerLanguage('glsl', glsl);
 interface MarkdownRendererProps {
   content: string;
   className?: string;
+  underlineH1?: boolean;
 }
 
-export default function MarkdownRenderer({ content, className }: MarkdownRendererProps) {
+export default function MarkdownRenderer({ content, className, underlineH1 = false }: MarkdownRendererProps) {
   return (
     <div className={`prose prose-sm md:prose-base lg:prose-lg dark:prose-invert py-4 max-w-none 
       prose-pre:p-0 prose-pre:m-0 prose-pre:bg-transparent prose-pre:border-0 prose-pre:shadow-none
@@ -32,7 +33,7 @@ export default function MarkdownRenderer({ content, className }: MarkdownRendere
         remarkPlugins={[remarkGfm]}
         components={{
           // 自定义标题样式
-          h1: ({ node, ...props }) => <h3 className="text-xl font-semibold underline mb-2" {...props} />,
+          h1: ({ node, ...props }) => <h3 className={`text-xl font-semibold mb-2 ${underlineH1 ? 'underline' : ''}`} {...props} />,
           h2: ({ node, ...props }) => <h4 className="text-lg font-semibold mb-2" {...props} />,
           h3: ({ node, ...props }) => <h5 className="text-md font-semibold mb-2" {...props} />,
           

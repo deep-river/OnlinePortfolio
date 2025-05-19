@@ -71,7 +71,10 @@ export default function ProjectSectionRenderer({ section, setSelectedImage }: Pr
       return (
         <section className="mb-8" id={section.id}>
           <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
-          <MarkdownRenderer content={markdownContent.markdown || markdownContent.text || ''} />
+          <MarkdownRenderer 
+            content={markdownContent.markdown || markdownContent.text || ''} 
+            underlineH1={true}  // 为roles部分的h1添加下划线
+          />
         </section>
       );
     }
