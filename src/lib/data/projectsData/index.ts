@@ -7,6 +7,14 @@ import apocalypsePartyEN from "./apocalypse-party/en";
 import apocalypsePartyZH from "./apocalypse-party/zh";
 import lightCatRunEN from "./light-cat-run/en";
 import lightCatRunZH from "./light-cat-run/zh";
+import ticTacToeEN from "./tic-tac-toe/en";
+import ticTacToeZH from "./tic-tac-toe/zh";
+import grapplingHookDemoEN from "./grappling-hook-demo/en";
+import grapplingHookDemoZH from "./grappling-hook-demo/zh";
+import fantasyRpgDemoEN from "./fantasy-rpg-demo/en";
+import fantasyRpgDemoZH from "./fantasy-rpg-demo/zh";
+import boomPartyEN from "./boom-party/en";
+import boomPartyZH from "./boom-party/zh";
 
 // 项目数据映射，按语言和项目ID组织
 export const projectsData: Record<string, Record<string, ProjectData>> = {
@@ -15,14 +23,20 @@ export const projectsData: Record<string, Record<string, ProjectData>> = {
     "phantom-flash": phantomFlashEN,
     "light-cat-run": lightCatRunEN,
     "apocalypse-party": apocalypsePartyEN,
-    // 随着更多项目添加到markdown化的数据模型中，在这里添加
+    "boom-party": boomPartyEN,
+    "fantasy-rpg-demo": fantasyRpgDemoEN,
+    "grappling-hook-demo": grapplingHookDemoEN,
+    "tic-tac-toe": ticTacToeEN,
   },
   zh: {
     "threejs-rendering-pipeline": threeJSPipelineZH,
     "phantom-flash": phantomFlashZH,
     "light-cat-run": lightCatRunZH,
     "apocalypse-party": apocalypsePartyZH,
-    // 随着更多项目添加到markdown化的数据模型中，在这里添加
+    "tic-tac-toe": ticTacToeZH,
+    "grappling-hook-demo": grapplingHookDemoZH,
+    "fantasy-rpg-demo": fantasyRpgDemoZH,
+    "boom-party": boomPartyZH,
   }
 };
 

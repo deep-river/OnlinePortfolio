@@ -82,7 +82,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                       {project.links?.itchio && (
                         <Button asChild variant="outline">
                           <Link href={project.links.itchio} target="_blank" rel="noopener noreferrer">
-                            <Gamepad2 className="mr-2 h-4 w-4" />Itch.io
+                            <Gamepad2 className="mr-2 h-4 w-4" />{t('viewOnItchio')}
                           </Link>
                         </Button>
                       )}

@@ -26,16 +26,7 @@ const apocalypsePartyEN: ProjectData = {
     steam: "https://store.steampowered.com/app/2599800/Apocalypse_Party/"
   },
   
-  roles: [
-    {
-      title: "UE5 Technical Designer",
-      responsibilities: [
-        "Designed and implemented gameplay systems using UE5 Blueprint",
-        "Worked with the Able Ability System for character abilities",
-        "Created combat mechanics and progression systems"
-      ]
-    }
-  ],
+  mainRole: "UE5 Technical Designer",
   
   detailedSections: [
     {
@@ -80,7 +71,7 @@ const apocalypsePartyEN: ProjectData = {
       content: [
         {
           type: "list",
-          items: ["Unreal", "Blueprint", "Able Ability System"]
+          items: ["Unreal 5", "Blueprint", "Able Ability System", "Game Design"]
         }
       ]
     }

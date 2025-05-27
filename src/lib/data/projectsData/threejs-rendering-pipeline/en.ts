@@ -24,7 +24,7 @@ const threeJSPipelineEN: ProjectData = {
 
   links: {
     github: "https://github.com/deep-river/ThreeJSRenderingPipelineDemo",
-    liveDemo: "https://threejsrenderingpipelinedemo.vercel.app/"
+    liveDemo: "https://threejs-rendering-pipeline-demo.vercel.app/"
   },
   
   mainRole: "Full Stack Developer & Graphics Programmer",
