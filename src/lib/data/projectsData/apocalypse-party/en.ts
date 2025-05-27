@@ -8,18 +8,18 @@ const apocalypsePartyEN: ProjectData = {
   thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/apocalypse-party-pc-game-steam-cover.jpg",
   
   heroMedia: {
-    type: 'image',
-    src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/apocalypse-party-pc-game-steam-cover.jpg",
-    alt: "Apocalypse Party on Steam"
+    type: 'video',
+    src: "https://www.youtube.com/embed/ALRJ2hy0kwo",
+    alt: "Apocalypse Party trailer video"
   },
   
   overviewDescription: "Apocalypse Party is a 3D top-down action Roguelike game. In this game, you will embark on a new mission to traverse through the Middle Ages and gradually master abilities, and arm yourself to become the strongest survivor through numerous choices.",
   
   projectInfo: {
-    genre: "Action Roguelike",
+    genre: "Action, Roguelike",
     engine: "Unreal Engine 5",
     platform: "PC (Steam)",
-    teamsize: "5+"
+    teamsize: "10"
   },
   
   links: {
@@ -38,8 +38,18 @@ const apocalypsePartyEN: ProjectData = {
           media: [
             {
               type: "image",
-              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/apocalypse-party-pc-game-steam-cover.jpg",
-              alt: "Apocalypse Party Cover"
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Apocalypse-party-screenshot-01.jpg",
+              alt: "Apocalypse Party screenshot"
+            },
+            {
+              type: "image",
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Apocalypse-party-screenshot-02.jpg",
+              alt: "Apocalypse Party screenshot"
+            },
+            {
+              type: "image",
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/Apocalypse-party-screenshot-03.jpg",
+              alt: "Apocalypse Party screenshot"
             }
           ]
         }
@@ -57,11 +67,25 @@ const apocalypsePartyEN: ProjectData = {
     },
     {
       id: "features",
-      title: "Project Features",
+      title: "Game Design Highlights",
       content: [
         {
           type: "markdown",
           markdown: featuresMarkdown
+        }
+      ]
+    },
+    {
+      id: "demo-video",
+      title: "",
+      content: [
+        {
+          type: "video",
+          video: {
+            type: "video",
+            src: "https://www.youtube.com/embed/lU-khMAAQpk",
+            alt: "Apocalypse Party Gameplay Demo"
+          }
         }
       ]
     },
@@ -73,7 +97,8 @@ const apocalypsePartyEN: ProjectData = {
           type: "list",
           items: ["Unreal 5", "Blueprint", "Able Ability System", "Game Design"]
         }
-      ]
+      ],
+      hideInDetailPage: true
     }
   ]
 };

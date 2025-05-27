@@ -34,12 +34,27 @@ const lightCatRunEN: ProjectData = {
           media: [
             {
               type: "image",
-              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-TitleScreen.jpg",
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-MainMenu.jpg",
               alt: "Light Cat Run Title Screen"
             },
             {
               type: "image",
-              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-Gameplay.jpg",
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-PauseMenu.jpg",
+              alt: "Light Cat Run Pause Menu"
+            },
+            {
+              type: "image",
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-GameScene.jpg",
+              alt: "Light Cat Run Gameplay Screenshot"
+            },
+            {
+              type: "image",
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-LightPole.jpg",
+              alt: "Light Cat Run Gameplay Screenshot"
+            },
+            {
+              type: "image",
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-Monster.jpg",
               alt: "Light Cat Run Gameplay Screenshot"
             }
           ]
@@ -72,7 +87,7 @@ const lightCatRunEN: ProjectData = {
       content: [
         {
           type: "list",
-          items: ["Unity", "GameJam", "2D Game", "AI Systems"]
+          items: ["Unity", "GameJam", "C#", "AI Systems"]
         }
       ],
       hideInDetailPage: true

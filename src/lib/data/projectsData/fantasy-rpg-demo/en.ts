@@ -103,7 +103,8 @@ const fantasyRpgDemoEN: ProjectData = {
           type: "list",
           items: ["Unity", "C#", "Protobuf", "UGUI", "Networking"]
         }
-      ]
+      ],
+      hideInDetailPage: true
     }
   ]
 };

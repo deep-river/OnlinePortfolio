@@ -72,7 +72,8 @@ const ticTacToeEN: ProjectData = {
           type: "list",
           items: ["Unity Engine", "C#", "AI Algorithms", "Minimax Algorithm"]
         }
-      ]
+      ],
+      hideInDetailPage: true
     }
   ]
 };

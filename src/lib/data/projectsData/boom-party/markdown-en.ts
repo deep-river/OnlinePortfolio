@@ -1,6 +1,6 @@
 // Role and Responsibilities Markdown content
 export const rolesMarkdown = `
-## Technical Designer
+# Technical Designer
 
 As a Technical Designer on this large-scale mobile game project, I was responsible for:
 

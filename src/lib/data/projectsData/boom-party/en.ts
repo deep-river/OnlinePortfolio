@@ -74,7 +74,8 @@ const boomPartyEN: ProjectData = {
           type: "list",
           items: ["Javascript", "Lua", "CrossPlatform", "Editor Tools", "Network Programming"]
         }
-      ]
+      ],
+      hideInDetailPage: true
     }
   ]
 };

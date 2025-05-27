@@ -81,7 +81,7 @@ const phantomFlashEN: ProjectData = {
       content: [
         {
           type: "list",
-          items: ["Unity", "GameJam", "3D Game"]
+          items: ["Unity", "GameJam", "c#", "Game Design"]
         }
       ],
       hideInDetailPage: true

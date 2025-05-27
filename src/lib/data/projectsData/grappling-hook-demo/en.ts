@@ -56,10 +56,8 @@ const grapplingHookDemoEN: ProjectData = {
         {
           type: "list",
           items: [
-            "Dynamic rope physics simulation",
-            "Realistic grappling hook mechanics",
+            "Dynamic rope physics simulation & realistic grappling hook mechanics",
             "Hook detection and attachment system",
-            "Inspired by Sekiro: Shadows Die Twice",
             "Smooth character movement and swinging"
           ]
         }
@@ -73,7 +71,8 @@ const grapplingHookDemoEN: ProjectData = {
           type: "list",
           items: ["Unity", "C#", "Physics Simulation"]
         }
-      ]
+      ],
+      hideInDetailPage: true
     }
   ]
 };

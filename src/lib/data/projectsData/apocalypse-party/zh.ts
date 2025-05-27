@@ -26,16 +26,7 @@ const apocalypsePartyZH: ProjectData = {
     steam: "https://store.steampowered.com/app/2599800/Apocalypse_Party/"
   },
   
-  roles: [
-    {
-      title: "UE5技术设计师",
-      responsibilities: [
-        "使用UE5蓝图设计和实现游戏系统",
-        "使用Able能力系统实现角色能力",
-        "创建战斗机制和进度系统"
-      ]
-    }
-  ],
+  mainRole: "UE5技术设计师",
   
   detailedSections: [
     {
@@ -71,6 +62,20 @@ const apocalypsePartyZH: ProjectData = {
         {
           type: "markdown",
           markdown: featuresMarkdown
+        }
+      ]
+    },
+    {
+      id: "demo-video",
+      title: "",
+      content: [
+        {
+          type: "video",
+          video: {
+            type: "video",
+            src: "https://www.youtube.com/embed/ALRJ2hy0kwo",
+            alt: "末日派对游戏演示"
+          }
         }
       ]
     },

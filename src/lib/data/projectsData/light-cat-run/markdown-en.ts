@@ -1,14 +1,18 @@
 // 角色与职责Markdown内容
 export const rolesMarkdown = `
-## Unity Programmer
 
-In this award-winning game jam project, I served as a Unity programmer with the following responsibilities:
+In this award-winning game jam project, I served as a Unity gameplay programmer with the following responsibilities:
+# Gameplay Programmer
 
-- Implemented core gameplay mechanics for the cat luring system using Unity's physics and AI systems
-- Developed sophisticated cat AI and behavior systems with customizable parameters for different personalities
-- Created environmental interaction systems that allowed cats to react to various objects in the game world
-- Implemented puzzle mechanics that required strategic use of the laser pointer
-- Optimized game performance for smooth gameplay
+- Developed core gameplay mechanics for the cat luring system using Unity's AI systems.
+- Implemented 2D character animation controller using an animation state machine.
+- Developed environmental interaction systems that allowed cats to react to various objects in the game world.
+- Implemented post-processing effects controller.
+
+# UI Programmer
+
+- Developed UI system including Start Screen, Pause Menu, and HUD interfaces with UGUI.
+
 `;
 
 // 项目特点的Markdown内容
@@ -23,11 +27,4 @@ Light Cat Run features innovative gameplay mechanics:
 - **Monster Evasion**: Players must carefully plan routes to avoid roaming monsters
 - **Puzzle Design**: Strategically designed puzzles that require timing and planning
 
-## Award Recognition
-
-The game received the "Best Visual & Audio" award at the 2024 TapTap Spotlight GameJam, recognizing our efforts in creating an atmospherically rich gaming experience with:
-
-- Charming cat animations and behaviors
-- Engaging sound design that enhances gameplay
-- Visually appealing environments that support the gameplay mechanics
 `; 

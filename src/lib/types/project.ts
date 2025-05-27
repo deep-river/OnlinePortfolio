@@ -12,12 +12,13 @@ export interface MediaItem {
 }
 
 export interface ProjectSectionContent {
-  type: 'paragraph' | 'list' | 'heading' | 'mediaGroup' | 'markdown';
+  type: 'paragraph' | 'list' | 'heading' | 'mediaGroup' | 'markdown' | 'video';
   text?: string; // For paragraph, heading, markdown
   items?: string[]; // For list
   level?: 1 | 2 | 3 | 4; // For heading
   media?: MediaItem[]; // For a group of images/videos/code snippets
   markdown?: string; // For markdown content
+  video?: MediaItem; // For single video display
 }
 
 export interface ProjectSection {

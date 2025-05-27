@@ -34,6 +34,21 @@ const renderContent = (contentItem: ProjectSectionContent, index: number, setSel
           <MarkdownRenderer content={contentItem.markdown || contentItem.text || ''} />
         </div>
       );
+    case 'video':
+      return (
+        <div key={index} className="my-6 flex justify-center">
+          <div className="w-full max-w-4xl">
+            {contentItem.video && (
+              <MediaDisplay 
+                item={contentItem.video} 
+                setSelectedImage={setSelectedImage} 
+                fullWidth={true}
+                className="w-full"
+              />
+            )}
+          </div>
+        </div>
+      );
     default:
       return null;
   }
@@ -122,7 +137,7 @@ export default function ProjectSectionRenderer({ section, setSelectedImage }: Pr
 
   return (
     <section className="mb-8" id={section.id}>
-      <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
+      {section.title && <h2 className="text-2xl font-bold mb-4">{section.title}</h2>}
       <div className={section.layout === 'two-column-image-left' || section.layout === 'two-column-image-right' 
         ? 'md:grid md:grid-cols-2 md:gap-6' 
         : ''}>
