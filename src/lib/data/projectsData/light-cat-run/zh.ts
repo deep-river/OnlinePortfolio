@@ -22,16 +22,12 @@ const lightCatRunZH: ProjectData = {
     teamsize: "3"
   },
   
-  roles: [
-    {
-      title: "Unity程序员",
-      responsibilities: [
-        "实现核心游戏机制",
-        "开发猫咪AI和行为系统",
-        "创建环境交互系统"
-      ]
-    }
-  ],
+  links: {
+    taptap: "https://www.taptap.cn/app/727882",
+    itchio: "https://oguri-ridge.itch.io/light-catrun"
+  },
+  
+  mainRole: "Unity程序员",
   
   detailedSections: [
     {

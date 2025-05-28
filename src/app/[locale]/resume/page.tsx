@@ -8,7 +8,6 @@ import { GithubIcon, MailIcon, PhoneIcon, DownloadIcon } from "lucide-react"
 import { useTranslations, useLocale } from 'next-intl'
 
 export default function Resume() {
-  const t = useTranslations('Resume');
   const tCommon = useTranslations('Common');
   const locale = useLocale();
 

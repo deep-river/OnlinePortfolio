@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { getProjectByLocaleAndId } from '@/lib/data/projectsData';
-import type { ProjectSection } from '@/lib/types/project';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -20,10 +19,6 @@ export default function ProjectDetail() {
   
   // 默认使用中文数据
   const project = getProjectByLocaleAndId('zh', projectId);
-  
-  useEffect(() => {
-    document.title = project ? `${project.title} | Bangyu Li Portfolio` : 'Project Not Found';
-  }, [project]);
 
   // 如果找不到项目数据，返回404
   if (!project) {

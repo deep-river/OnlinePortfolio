@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -8,10 +7,6 @@ import { Badge } from "@/components/ui/badge"
 import { GithubIcon, MailIcon, PhoneIcon, DownloadIcon } from "lucide-react"
 
 export default function Resume() {
-  useEffect(() => {
-    document.title = "Bangyu Li | Resume - Game Developer / Designer"
-  }, [])
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="bg-primary text-primary-foreground">

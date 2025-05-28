@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import SharedHeader from '@/components/layout/SharedHeader';
 
-// 设置默认的元数据
-export const metadata: Metadata = {
-  title: "李邦宇 | 游戏开发/设计师作品集",
-  description: "李邦宇的在线作品集，展示游戏开发和设计项目。",
-};
+// 动态生成元数据
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'Common' });
+  
+  return {
+    title: t('pageTitle'),
+    description: locale === 'en' 
+      ? "Bangyu Li's online portfolio showcasing game development and design projects."
+      : "李邦宇的在线作品集，展示游戏开发和设计项目。",
+  };
+}
 
 interface RootLayoutProps {
   children: React.ReactNode;

@@ -7,15 +7,12 @@ import { LinkedinIcon, MailIcon, GithubIcon } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { getProjectsByLocale } from '@/lib/data/projectsData'
-import { useRouter } from 'next/navigation';
 
 export default function GameDevPortfolio() {
-  const t = useTranslations();
   const tPortfolio = useTranslations('PortfolioPage');
   const tSocial = useTranslations('SocialLinks');
   const tCommon = useTranslations('Common');
   const locale = useLocale();
-  const router = useRouter();
   
   // 使用新的数据获取函数
   const gameProjects = getProjectsByLocale(locale);

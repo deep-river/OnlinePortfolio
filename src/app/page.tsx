@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { LinkedinIcon, MailIcon, GithubIcon } from "lucide-react"
@@ -9,10 +8,6 @@ import Image from "next/image"
 import { getProjectsByLocale } from '@/lib/data/projectsData' // 引入项目数据函数
 
 export default function GameDevPortfolio() {
-  useEffect(() => {
-    document.title = "Bangyu Li | 游戏开发/设计师作品集"
-  }, [])
-
   // 使用getProjectsByLocale获取项目数据，默认获取中文项目
   const gameProjects = getProjectsByLocale('zh');
 
@@ -93,7 +88,7 @@ export default function GameDevPortfolio() {
                         </CardTitle>
                       </Link>
                       <CardDescription>
-                        {project.roles && project.roles.length > 0 ? project.roles[0].title : ''}
+                        {project.mainRole || ''}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
