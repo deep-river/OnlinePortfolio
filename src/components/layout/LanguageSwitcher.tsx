@@ -23,8 +23,9 @@ export default function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="sm" className="flex items-center gap-2">
           <Globe className="h-[1.2rem] w-[1.2rem]" />
+          <span>Language</span>
           <span className="sr-only">切换语言</span>
         </Button>
       </DropdownMenuTrigger>
