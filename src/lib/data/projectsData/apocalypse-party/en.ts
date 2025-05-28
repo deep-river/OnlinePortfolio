@@ -23,7 +23,7 @@ const apocalypsePartyEN: ProjectData = {
   },
   
   links: {
-    steam: "https://store.steampowered.com/app/2599800/Apocalypse_Party/"
+    steam: "https://store.steampowered.com/app/2351560/2/"
   },
   
   mainRole: "UE5 Technical Designer",
