@@ -33,21 +33,21 @@ export default function MarkdownRenderer({ content, className, underlineH1 = fal
         remarkPlugins={[remarkGfm]}
         components={{
           // 自定义标题样式
-          h1: ({ node, ...props }) => <h3 className={`text-xl font-semibold mb-2 ${underlineH1 ? 'underline' : ''}`} {...props} />,
-          h2: ({ node, ...props }) => <h4 className="text-lg font-semibold mb-2" {...props} />,
-          h3: ({ node, ...props }) => <h5 className="text-md font-semibold mb-2" {...props} />,
+          h1: ({ ...props }) => <h3 className={`text-xl font-semibold mb-2 ${underlineH1 ? 'underline' : ''}`} {...props} />,
+          h2: ({ ...props }) => <h4 className="text-lg font-semibold mb-2" {...props} />,
+          h3: ({ ...props }) => <h5 className="text-md font-semibold mb-2" {...props} />,
           
           // 自定义列表样式
-          ul: ({ node, ...props }) => <ul className="list-disc list-inside space-y-2 mb-4" {...props} />,
-          ol: ({ node, ...props }) => <ol className="list-decimal list-inside space-y-2 mb-4" {...props} />,
+          ul: ({ ...props }) => <ul className="list-disc list-inside space-y-2 mb-4" {...props} />,
+          ol: ({ ...props }) => <ol className="list-decimal list-inside space-y-2 mb-4" {...props} />,
           
           // 自定义段落样式
-          p: ({ node, ...props }) => <p className="mb-3" {...props} />,
+          p: ({ ...props }) => <p className="mb-3" {...props} />,
           
           // 自定义代码块样式
-          code: ({ node, className, children, ...props }: any) => {
+          code: ({ className, children, ...props }: React.ComponentProps<'code'>) => {
             const match = /language-(\w+)/.exec(className || '');
-            const isInline = !match && (props as any).inline;
+            const isInline = !match && 'inline' in props;
             
             if (isInline) {
               return <code className="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded" {...props}>{children}</code>;

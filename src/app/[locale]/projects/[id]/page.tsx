@@ -86,6 +86,20 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                           </Link>
                         </Button>
                       )}
+                      {project.links?.taptap && (
+                        <Button asChild variant="outline">
+                          <Link href={project.links.taptap} target="_blank" rel="noopener noreferrer">
+                            <Gamepad2 className="mr-2 h-4 w-4" />{t('viewOnTaptap')}
+                          </Link>
+                        </Button>
+                      )}
+                      {project.links?.steam && (
+                        <Button asChild variant="outline">
+                          <Link href={project.links.steam} target="_blank" rel="noopener noreferrer">
+                            <Gamepad2 className="mr-2 h-4 w-4" />{t('viewOnSteam')}
+                          </Link>
+                        </Button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

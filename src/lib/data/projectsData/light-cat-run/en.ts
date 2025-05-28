@@ -21,6 +21,11 @@ const lightCatRunEN: ProjectData = {
     platform: "PC",
     teamsize: "5"
   },
+
+  links: {
+    taptap: "https://www.taptap.cn/app/727882",
+    itchio: "https://oguri-ridge.itch.io/light-catrun"
+  },
   
   mainRole: "Unity Programmer & System Designer",
   

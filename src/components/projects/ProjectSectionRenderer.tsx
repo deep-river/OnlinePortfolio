@@ -1,6 +1,7 @@
 import type { ProjectSection, ProjectSectionContent } from '@/lib/types/project';
 import MediaDisplay from './MediaDisplay';
 import MarkdownRenderer from './MarkdownRenderer';
+import ExternalLinkCard from './ExternalLinkCard';
 
 interface ProjectSectionRendererProps {
   section: ProjectSection;
@@ -47,6 +48,19 @@ const renderContent = (contentItem: ProjectSectionContent, index: number, setSel
               />
             )}
           </div>
+        </div>
+      );
+    case 'externalLink':
+      return (
+        <div key={index} className="my-6">
+          {contentItem.link && (
+            <ExternalLinkCard
+              url={contentItem.link.url}
+              title={contentItem.link.title}
+              description={contentItem.link.description}
+              platform={contentItem.link.platform}
+            />
+          )}
         </div>
       );
     default:

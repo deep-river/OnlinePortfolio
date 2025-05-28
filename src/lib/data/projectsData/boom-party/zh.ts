@@ -3,26 +3,30 @@ import { rolesMarkdown } from './markdown-zh';
 
 const boomPartyZH: ProjectData = {
   id: "boom-party",
-  title: "Boom! Party",
-  shortDescription: "Boom! Party是一款尚未发布的多人第三人称解谜叙事游戏，正在使用公司的游戏引擎为iOS和Android平台开发，团队规模达300人。",
-  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/boom-party-img-01.jpg",
+  title: "Boom! Party 生活派对",
+  shortDescription: "上海莉莉丝游戏的在研项目，前身为达芬奇UGC编辑器，基于自研Avatar引擎开发。",
+  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/project-party-cover.jpg",
   
   heroMedia: {
     type: 'video',
-    src: "https://www.youtube.com/embed/sk6lfvUOMdY",
-    alt: "Boom! Party游戏视频"
+    src: "https://player.bilibili.com/player.html?isOutside=true&aid=1605250369&bvid=BV1rm421N7Cm&cid=1572245219&p=1",
+    alt: "Boom! Party游戏宣传视频"
   },
   
-  overviewDescription: "Boom! Party是一款尚未发布的多人第三人称解谜叙事游戏，正在使用公司的游戏引擎为iOS和Android平台开发，团队规模达300人。玩家将与其他玩家合作或竞争来解决不同的神秘案件，他们将通过各种推理进行交流并投票淘汰杀手，杀手可能是NPC或其他玩家。",
+  overviewDescription: "欢迎来到《生活派对》，逃离日常，疯玩开场。《生活派对》是一款超好玩的电子轰趴App。在这里，自由创造虚拟形象，鬼屋打工，戏精飙戏，怪趣问答，怎么玩都可以。\n\n上海莉莉丝游戏的在研项目，前身为达芬奇UGC编辑器，基于自研Avatar引擎开发。",
   
   projectInfo: {
-    genre: "模拟游戏",
+    genre: "模拟经营",
     engine: "Avatar引擎",
     platform: "移动端",
     teamsize: "200+"
   },
   
-  mainRole: "技术设计师",
+  links: {
+    taptap: "https://www.taptap.cn/app/387202?os=android"
+  },
+
+  mainRole: "技术策划",
   
   detailedSections: [
     {
@@ -58,7 +62,7 @@ const boomPartyZH: ProjectData = {
     },
     {
       id: "roles",
-      title: "角色和职责",
+      title: "职责",
       content: [
         {
           type: "markdown",
@@ -72,9 +76,10 @@ const boomPartyZH: ProjectData = {
       content: [
         {
           type: "list",
-          items: ["Avatar引擎", "移动端开发", "插件开发", "编辑器工具", "任务系统"]
+          items: ["插件开发", "编辑器工具开发", "Lua", "Javascript"]
         }
-      ]
+      ],
+      hideInDetailPage: true
     }
   ]
 };

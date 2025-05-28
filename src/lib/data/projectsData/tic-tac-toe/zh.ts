@@ -12,7 +12,7 @@ const ticTacToeZH: ProjectData = {
     alt: "井字棋游戏截图"
   },
   
-  overviewDescription: "实现了具有不同难度AI对手的井字棋游戏，使用极小极大算法实现无敌难度级别。",
+  overviewDescription: "实现了具有不同难度AI对手的井字棋游戏，使用Minimax算法实现无敌难度级别。",
   
   projectInfo: {
     genre: "益智游戏",
@@ -57,9 +57,9 @@ const ticTacToeZH: ProjectData = {
           type: "list",
           items: [
             "具有不同难度级别的AI对手",
-            "极小极大算法实现的无敌AI",
+            "Minimax算法实现的无敌AI",
             "简洁直观的用户界面",
-            "与AI的单人游戏模式"
+            "与AI对战的单人游戏模式"
           ]
         }
       ]
@@ -70,7 +70,7 @@ const ticTacToeZH: ProjectData = {
       content: [
         {
           type: "list",
-          items: ["Unity引擎", "C#", "AI算法", "极小极大算法"]
+          items: ["Unity", "C#", "AI系统"]
         }
       ]
     }

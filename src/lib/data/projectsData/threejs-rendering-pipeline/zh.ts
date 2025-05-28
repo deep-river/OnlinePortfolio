@@ -1,10 +1,10 @@
 import { ProjectData } from '@/lib/types/project';
-import { rolesMarkdown, featuresMarkdown } from './markdown-zh';
+import { rolesMarkdown, featuresMarkdown, highlightsMarkdown } from './markdown-zh';
 
 const threeJSPipelineZH: ProjectData = {
   id: "threejs-rendering-pipeline",
-  title: "Three.js 模拟图形渲染管线在线演示",
-  shortDescription: "使用Three.js和React实现的3D图形渲染管线交互式教育可视化工具。",
+  title: "Three.js 模拟图形渲染管线交互式演示",
+  shortDescription: "使用Three.js和React实现的图形渲染管线交互式演示项目。用于展示3D图形渲染管线中不同阶段的可视化效果，具有多个可配置的参数以展示对于顶点、片元、光照与后处理的不同处理过程。",
   thumbnailImage: "https://raw.githubusercontent.com/deep-river/ThreeJSRenderingPipelineDemo/refs/heads/main/Screenshots/ThreeJSRPD-01.jpg",
   
   heroMedia: {
@@ -13,7 +13,7 @@ const threeJSPipelineZH: ProjectData = {
     alt: "Three.js渲染管线演示截图"
   },
   
-  overviewDescription: "使用Three.js和React实现的3D图形渲染管线交互式教育可视化工具。该项目允许学生、教育工作者和图形爱好者交互式地探索管线的每个阶段，帮助揭示将3D数据转换为2D图像的复杂过程。",
+  overviewDescription: "使用Three.js和React实现的图形渲染管线交互式演示项目。用于展示3D图形渲染管线中不同阶段的可视化效果，具有多个可配置的参数以展示对于顶点、片元、光照与后处理的不同处理过程。",
   
   projectInfo: {
     technology: "Three.js, React, GLSL",
@@ -24,10 +24,10 @@ const threeJSPipelineZH: ProjectData = {
 
   links: {
     github: "https://github.com/deep-river/ThreeJSRenderingPipelineDemo",
-    liveDemo: "https://threejsrenderingpipelinedemo.vercel.app/"
+    liveDemo: "https://threejs-rendering-pipeline-demo.vercel.app/"
   },
 
-  mainRole: "全栈开发者 & 图形程序员",
+  mainRole: "全栈开发",
   
   detailedSections: [
     {
@@ -53,7 +53,7 @@ const threeJSPipelineZH: ProjectData = {
     },
     {
       id: "roles",
-      title: "角色与职责",
+      title: "项目职责",
       content: [
         {
           type: "markdown",
@@ -63,11 +63,21 @@ const threeJSPipelineZH: ProjectData = {
     },
     {
       id: "features",
-      title: "项目特点",
+      title: "实现功能",
       content: [
         {
           type: "markdown",
           markdown: featuresMarkdown
+        }
+      ]
+    },
+    {
+      id: "highlights",
+      title: "技术亮点",
+      content: [
+        {
+          type: "markdown",
+          markdown: highlightsMarkdown
         }
       ]
     },

@@ -1,25 +1,25 @@
 import { ProjectData } from '@/lib/types/project';
-import { rolesMarkdown, featuresMarkdown } from './markdown-zh';
+import { rolesMarkdown } from './markdown-zh';
 
 const lightCatRunZH: ProjectData = {
   id: "light-cat-run",
-  title: "光猫快跑",
-  shortDescription: "一款可爱的解谜冒险游戏，你将使用激光笔引导一群猫咪，与环境互动，并规划完美的路线以逃离游荡的怪物。",
+  title: "Light Cat Run",
+  shortDescription: "一款可爱的解谜冒险游戏，玩家使用激光笔引导猫咪与环境互动，并规划完美的路线以逃离游荡的怪物。2024年TapTap聚光灯Gamejam参赛作品，获得\"最佳视觉与音效奖\"与\"最佳人气奖\"。",
   thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-TitleScreen.jpg",
   
   heroMedia: {
-    type: 'image',
-    src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-TitleScreen.jpg",
-    alt: "《光猫快跑》标题画面"
+    type: 'video',
+    src: "https://player.bilibili.com/player.html?isOutside=true&aid=113382824938926&bvid=BV16T1GYdEBo&cid=26498042017&p=1",
+    alt: "Light CatRun实机视频"
   },
   
-  overviewDescription: "一款可爱的解谜冒险游戏，你将使用激光笔引导一群猫咪，与环境互动，并规划完美的路线以逃离游荡的怪物。这是2024年TapTap聚光灯游戏开发比赛的获奖作品，获得了最佳视觉与音频奖。",
+  overviewDescription: "一款可爱的解谜冒险游戏，玩家使用激光笔引导猫咪与环境互动，并规划完美的路线以逃离游荡的怪物。\n\n该项目为2024年TapTap聚光灯Gamejam参赛作品，获得了\"最佳视觉与音效奖\"与\"最佳人气奖\"。",
   
   projectInfo: {
-    genre: "解谜冒险",
+    genre: "2D, 解谜, 冒险",
     engine: "Unity",
     platform: "PC",
-    teamsize: "3"
+    teamsize: "5"
   },
   
   links: {
@@ -27,7 +27,7 @@ const lightCatRunZH: ProjectData = {
     itchio: "https://oguri-ridge.itch.io/light-catrun"
   },
   
-  mainRole: "Unity程序员",
+  mainRole: "Unity程序",
   
   detailedSections: [
     {
@@ -39,13 +39,28 @@ const lightCatRunZH: ProjectData = {
           media: [
             {
               type: "image",
-              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-TitleScreen.jpg",
-              alt: "《光猫快跑》标题画面"
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-MainMenu.jpg",
+              alt: "Light Cat Run Title Screen"
             },
             {
               type: "image",
-              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-Gameplay.jpg",
-              alt: "《光猫快跑》游戏截图"
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-PauseMenu.jpg",
+              alt: "Light Cat Run Pause Menu"
+            },
+            {
+              type: "image",
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-GameScene.jpg",
+              alt: "Light Cat Run Gameplay Screenshot"
+            },
+            {
+              type: "image",
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-LightPole.jpg",
+              alt: "Light Cat Run Gameplay Screenshot"
+            },
+            {
+              type: "image",
+              src: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/LightCatRun-Monster.jpg",
+              alt: "Light Cat Run Gameplay Screenshot"
             }
           ]
         }
@@ -53,21 +68,11 @@ const lightCatRunZH: ProjectData = {
     },
     {
       id: "roles",
-      title: "角色和职责",
+      title: "职责",
       content: [
         {
           type: "markdown",
           markdown: rolesMarkdown
-        }
-      ]
-    },
-    {
-      id: "features",
-      title: "游戏特点",
-      content: [
-        {
-          type: "markdown",
-          markdown: featuresMarkdown
         }
       ]
     },
@@ -77,9 +82,10 @@ const lightCatRunZH: ProjectData = {
       content: [
         {
           type: "list",
-          items: ["Unity", "游戏开发比赛", "2D游戏", "AI系统"]
+          items: ["Unity", "Gamejam", "C#"]
         }
-      ]
+      ],
+      hideInDetailPage: true
     }
   ]
 };

@@ -33,10 +33,10 @@ export const projectsData: Record<string, Record<string, ProjectData>> = {
     "phantom-flash": phantomFlashZH,
     "light-cat-run": lightCatRunZH,
     "apocalypse-party": apocalypsePartyZH,
-    "tic-tac-toe": ticTacToeZH,
-    "grappling-hook-demo": grapplingHookDemoZH,
-    "fantasy-rpg-demo": fantasyRpgDemoZH,
     "boom-party": boomPartyZH,
+    "fantasy-rpg-demo": fantasyRpgDemoZH,
+    "grappling-hook-demo": grapplingHookDemoZH,
+    "tic-tac-toe": ticTacToeZH,
   }
 };
 

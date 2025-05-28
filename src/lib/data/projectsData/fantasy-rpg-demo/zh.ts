@@ -3,9 +3,9 @@ import { featuresMarkdown, mainModulesMarkdown } from './markdown-zh';
 
 const fantasyRpgDemoZH: ProjectData = {
   id: "fantasy-rpg-demo",
-  title: "奇幻RPG",
-  shortDescription: "一个多人RPG演示项目，展示了我在设计和实现复杂游戏系统方面的专业技能。",
-  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-01.png",
+  title: "Fantasy RPG",
+  shortDescription: "利用Unity及C#后端实现的网络功能演示项目。开发了基于事件的消息收发处理，角色移动状态同步，组件化UI框架，背包/商店系统，任务系统，组队系统，多频道的聊天系统等功能。",
+  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/FantasyRPG-screenshot-11.png",
   
   heroMedia: {
     type: 'video',
@@ -13,11 +13,11 @@ const fantasyRpgDemoZH: ProjectData = {
     alt: "奇幻RPG演示视频"
   },
   
-  overviewDescription: "一个多人RPG演示项目，展示了我在设计和实现复杂游戏系统方面的专业技能。",
+  overviewDescription: "利用Unity及C#后端实现的网络功能演示项目。开发了基于事件的消息收发处理，角色移动状态同步，组件化UI框架，背包/商店系统，任务系统，组队系统，多频道的聊天系统等功能。",
   
   projectInfo: {
-    genre: "大型多人在线角色扮演游戏",
-    engine: "Unity引擎",
+    genre: "MMORPG",
+    engine: "Unity",
     platform: "PC",
     teamsize: "1"
   },
@@ -26,7 +26,7 @@ const fantasyRpgDemoZH: ProjectData = {
     github: "https://github.com/deep-river/mmorpg-demo-template"
   },
   
-  mainRole: "全栈游戏开发者",
+  mainRole: "全栈开发",
   
   detailedSections: [
     {
@@ -77,7 +77,7 @@ const fantasyRpgDemoZH: ProjectData = {
     },
     {
       id: "features",
-      title: "主要特点",
+      title: "主要功能概述",
       content: [
         {
           type: "markdown",
@@ -87,7 +87,7 @@ const fantasyRpgDemoZH: ProjectData = {
     },
     {
       id: "modules",
-      title: "主要模块",
+      title: "详细功能模块",
       content: [
         {
           type: "markdown",
@@ -101,9 +101,10 @@ const fantasyRpgDemoZH: ProjectData = {
       content: [
         {
           type: "list",
-          items: ["Unity引擎", "C#", "Protobuf", "UGUI", "网络编程", "数据库管理"]
+          items: ["Unity", "C#", "Protobuf", "UGUI", "网络编程"]
         }
-      ]
+      ],
+      hideInDetailPage: true
     }
   ]
 };

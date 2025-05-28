@@ -12,13 +12,19 @@ export interface MediaItem {
 }
 
 export interface ProjectSectionContent {
-  type: 'paragraph' | 'list' | 'heading' | 'mediaGroup' | 'markdown' | 'video';
+  type: 'paragraph' | 'list' | 'heading' | 'mediaGroup' | 'markdown' | 'video' | 'externalLink';
   text?: string; // For paragraph, heading, markdown
   items?: string[]; // For list
   level?: 1 | 2 | 3 | 4; // For heading
   media?: MediaItem[]; // For a group of images/videos/code snippets
   markdown?: string; // For markdown content
   video?: MediaItem; // For single video display
+  link?: {
+    url: string;
+    title: string;
+    description?: string;
+    platform?: string; // e.g., 'feishu', 'notion', 'google-docs'
+  }; // For external link display
 }
 
 export interface ProjectSection {
