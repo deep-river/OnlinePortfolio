@@ -1,0 +1,39 @@
+{
+  "Navigation": {
+    "portfolio": "Portfolio",
+    "resume": "Resume"
+  },
+  "ProjectDetails": {
+    "backToPortfolio": "Back to Portfolio",
+    "screenshots": "Screenshots",
+    "rolesAndResponsibilities": "Role(s) and Responsibilities",
+    "aboutProject": "About the Project",
+    "liveDemo": "Live Demo",
+    "viewCode": "View Code",
+    "viewOnSteam": "View on Steam",
+    "viewOnItchio": "View on Itch.io",
+    "viewOnTaptap": "View on TapTap",
+    "technology": "Technology",
+    "genre": "Genre",
+    "engine": "Engine",
+    "language": "Language",
+    "platform": "Platform",
+    "teamsize": "Team Size",
+    "releaseDate": "Release Date"
+  },
+  "PortfolioPage": {
+    "myProjects": "My Projects",
+    "moreDetails": "More Details",
+    "personalStatement": "Games aren't just what I make, it's what I breathe. If you're looking for a passionate technical designer/gameplay programmer, you are looking for me.\n\nI'm currently wrapping up my MSc in Computer Game Engineering at Newcastle University and have two years of industry experience as a Technical Designer. I've honed my skills in system design, level design, OpenGL rendering, physics simulation, game engine technology, tool programming, gameplay development, and more.\n\nI'm on the lookout for opportunities as a technical designer and gameplay programmer—let's connect."
+  },
+  "SocialLinks": {
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "github": "GitHub"
+  },
+  "Common": {
+    "fullName": "Bangyu Li",
+    "pageTitle": "Bangyu Li | Game Developer/Designer Portfolio",
+    "projectPageTitle": "Bangyu Li | Game Developer/Designer Portfolio"
+  }
+} 
