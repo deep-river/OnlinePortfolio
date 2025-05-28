@@ -34,7 +34,7 @@ export default function Resume() {
         <div className="flex justify-center mb-8">
           <Button asChild>
             <Link href={locale === 'zh' ? 
-              "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/resume/CV-Bangyu%20Li-CN.pdf" : 
+              "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/resume/简历-李邦宇.pdf" : 
               "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/resume/CV-Bangyu%20Li.pdf"} 
               target="_blank" rel="noopener noreferrer" download>
               <DownloadIcon className="mr-2 h-4 w-4" />
