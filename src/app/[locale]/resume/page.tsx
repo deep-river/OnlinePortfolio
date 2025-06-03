@@ -53,6 +53,15 @@ export default function Resume() {
               <p className="font-semibold">{locale === 'zh' ? '计算机游戏工程 理学硕士' : 'MSc Computer Game Engineering'}</p>
               <p className="text-sm text-muted-foreground">{locale === 'zh' ? '预计毕业日期: 2025年9月' : 'Expected: Sep 2025'}</p>
               <p className="text-sm">{locale === 'zh' ? '英国，纽卡斯尔' : 'Newcastle upon Tyne, U.K.'}</p>
+              {locale === 'zh' && (
+                <div className="mt-4">
+                  <p className="font-semibold mb-2">相关课程:</p>
+                  <ul className="list-disc list-inside space-y-1 text-sm">
+                    <li><strong>高级游戏图形学:</strong> 课程涉及基于OpenGL的实时场景渲染，重点包括图形渲染管线、GPU架构、矩阵操作、实时光照、Shader编程、进阶渲染技术如阴影映射、延迟渲染与后处理效果等。</li>
+                    <li><strong>高级游戏引擎原理:</strong> 课程涉及C++游戏引擎技术，重点包括物理模拟、碰撞检测、基于八叉树的场景管理、AI状态机与行为树、NavMesh寻路、网络架构与网络同步等。</li>
+                  </ul>
+                </div>
+              )}
               {locale === 'en' && (
                 <div className="mt-4">
                   <p className="font-semibold mb-2">Relevant Coursework:</p>
