@@ -31,7 +31,7 @@ const boomPartyZH: ProjectData = {
   detailedSections: [
     {
       id: "screenshots",
-      title: "截图",
+      title: "游戏图片",
       content: [
         {
           type: "mediaGroup",

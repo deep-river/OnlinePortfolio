@@ -31,7 +31,7 @@ const fantasyRpgDemoZH: ProjectData = {
   detailedSections: [
     {
       id: "screenshots",
-      title: "截图",
+      title: "游戏截图",
       content: [
         {
           type: "mediaGroup",

@@ -64,7 +64,6 @@ export interface ProjectData {
   };
   
   mainRole?: string;
-  features?: string[]; // Simple list of features
   
   // For more complex, structured content
   detailedSections: ProjectSection[];

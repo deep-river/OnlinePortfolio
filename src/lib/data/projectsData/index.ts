@@ -15,10 +15,13 @@ import fantasyRpgDemoEN from "./fantasy-rpg-demo/en";
 import fantasyRpgDemoZH from "./fantasy-rpg-demo/zh";
 import boomPartyEN from "./boom-party/en";
 import boomPartyZH from "./boom-party/zh";
+import csc8508CourseworkZH from "./csc8508-coursework/zh";
+import csc8508CourseworkEN from "./csc8508-coursework/en";
 
 // 项目数据映射，按语言和项目ID组织
 export const projectsData: Record<string, Record<string, ProjectData>> = {
   en: {
+    "csc8508-coursework": csc8508CourseworkEN,
     "threejs-rendering-pipeline": threeJSPipelineEN,
     "phantom-flash": phantomFlashEN,
     "light-cat-run": lightCatRunEN,
@@ -29,6 +32,7 @@ export const projectsData: Record<string, Record<string, ProjectData>> = {
     "tic-tac-toe": ticTacToeEN,
   },
   zh: {
+    "csc8508-coursework": csc8508CourseworkZH,
     "threejs-rendering-pipeline": threeJSPipelineZH,
     "phantom-flash": phantomFlashZH,
     "light-cat-run": lightCatRunZH,
