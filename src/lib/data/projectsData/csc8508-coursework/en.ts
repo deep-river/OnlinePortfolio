@@ -17,7 +17,7 @@ const csc8508CourseworkEN: ProjectData = {
     alt: "CSC8508 Coursework Game Demo Video"
   },
   
-  overviewDescription: "This game was developed as part of the CSC8507/8508 \"Gaming Solutions within a Team\" coursework. Our 8-person team collaborated over three months to build a multiplayer top-down shooter game entirely from scratch in C++, demonstrating strong project management and teamwork capabilities.\n\nThe game features fast-paced action with multiple weapons and abilities, four unique level environments, and complete gameplay mechanics. All core systems—from rendering to networking—were implemented in pure C++.",
+  overviewDescription: "This game was developed as part of the CSC8507/8508 \"Gaming Solutions within a Team\" coursework. Our 8-person team collaborated over three months to build a multiplayer top-down shooter game entirely from scratch in C++, demonstrating strong project management and teamwork capabilities.\n\nThe game features fast-paced action with multiple weapons and abilities, four unique levels, and complete gameplay loops. All core systems—from rendering to networking—were implemented in pure C++.",
   
   projectInfo: {
     genre: "Multiplayer Top-Down Shooter",
