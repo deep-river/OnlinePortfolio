@@ -17,10 +17,13 @@ import boomPartyEN from "./boom-party/en";
 import boomPartyZH from "./boom-party/zh";
 import csc8508CourseworkZH from "./csc8508-coursework/zh";
 import csc8508CourseworkEN from "./csc8508-coursework/en";
+import monocropMadnessZH from "./monocrop-madness/zh";
+import monocropMadnessEN from "./monocrop-madness/en";
 
 // 项目数据映射，按语言和项目ID组织
 export const projectsData: Record<string, Record<string, ProjectData>> = {
   en: {
+    "monocrop-madness": monocropMadnessEN,
     "csc8508-coursework": csc8508CourseworkEN,
     "threejs-rendering-pipeline": threeJSPipelineEN,
     "phantom-flash": phantomFlashEN,
@@ -32,6 +35,7 @@ export const projectsData: Record<string, Record<string, ProjectData>> = {
     "tic-tac-toe": ticTacToeEN,
   },
   zh: {
+    "monocrop-madness": monocropMadnessZH,
     "csc8508-coursework": csc8508CourseworkZH,
     "threejs-rendering-pipeline": threeJSPipelineZH,
     "phantom-flash": phantomFlashZH,
