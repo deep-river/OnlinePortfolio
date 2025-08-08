@@ -4,7 +4,7 @@ const monocropMadnessEN: ProjectData = {
   id: "monocrop-madness",
   title: "CSC8599 Dissertation: (Educational Game) Monocrop Madness",
   shortDescription: "An Educational Game project for my dissertation.",
-  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/CSC8599-Game%20level%20overview.jpg",
+  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/CSC8599-UI%20CropPlanningPanel.jpg",
   
   heroMedia: {
     type: 'video',

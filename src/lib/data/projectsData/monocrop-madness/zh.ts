@@ -4,7 +4,7 @@ const monocropMadnessZH: ProjectData = {
   id: "monocrop-madness",
   title: "CSC8599毕设项目：（教育游戏）Monocrop Madness",
   shortDescription: "我的毕业设计项目，关于单一种植问题的教育游戏。",
-  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/CSC8599-Game%20level%20overview.jpg",
+  thumbnailImage: "https://raw.githubusercontent.com/deep-river/OnlinePortfolio/refs/heads/main/img/CSC8599-UI%20CropPlanningPanel.jpg",
   
   heroMedia: {
     type: 'video',
@@ -12,7 +12,7 @@ const monocropMadnessZH: ProjectData = {
     alt: "Monocrop Madness 游戏演示视频"
   },
   
-  overviewDescription: "我的毕业设计项目，关于单一种植问题的教育游戏。项目采用UE5实现，基于真实的农业问题进行建模，实现了包括种植系统，NPC对话系统与基础的经济系统在内的完整游戏流程。",
+  overviewDescription: "我在纽卡斯尔大学的毕业设计项目，内容为关于单一种植问题的教育游戏。项目采用UE5.5实现，基于真实的农业问题进行建模，通过种植玩法引导玩家理解单一种植的危害和应对措施，实现了较为完整的游戏流程。",
   
   projectInfo: {
     genre: "模拟经营，种田，类动森",
